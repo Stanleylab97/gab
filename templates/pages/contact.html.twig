@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div id="banner-area">
+	<img src="images/banner/banner1.jpg" alt="" />
+	<div class="parallax-overlay"></div>
+	<!-- Subpage title start -->
+	<div class="banner-title-content">
+		<div class="text-center">
+			<h2>Contactez-nous</h2>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb justify-content-center">
+					<li class="breadcrumb-item"><a href="/">Accueil</a></li>
+					<li class="breadcrumb-item text-white" aria-current="page">Contact</li>
+				</ol>
+			</nav>
+		</div>
+	</div><!-- Subpage title end -->
+</div><!-- Banner area end -->
+
+<!-- Main container start -->
+<section id="main-container">
+	<div class="container">
+		<!-- Map start here -->
+		<div class="map" id="map_canvas" data-latitude="6.358748" data-longitude="2.419619"
+			data-marker="images/marker.png"></div>
+		<!--/ Map end here -->
+
+		<div class="gap-40"></div>
+
+		<div class="row">
+			<div class="col-md-7">
+				<form id="contact-form" action="#" method="post" role="form">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Nom et Prénom</label>
+								<input class="form-control" name="name" id="name" placeholder="" type="text" required>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Email</label>
+								<input class="form-control" name="email" id="email" placeholder="" type="email" required>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Objet</label>
+								<input class="form-control" name="subject" id="subject" placeholder="" required>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Message</label>
+						<textarea class="form-control" name="message" id="message" placeholder="" rows="10" required></textarea>
+					</div>
+					<div class="text-right"><br>
+						<button class="btn btn-primary solid blank" type="submit">Envoyer</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-5">
+				<div class="contact-info">
+					<h3>Plus d'informations</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget erat magna. Pellentesque justo
+						ante</p>
+					<br>
+					<p><i class="fa fa-home info"></i> Zongo,boulevard St Michel  en face du CPA  </p>
+					<p><i class="fa fa-phone info"></i> +(229) 91-31-55-55/91-35-44-44 </p>
+					<p><i class="fa fa-envelope-o info"></i> info@gabassurance.com</p>
+					<p><i class="fa fa-globe info"></i> www.gabassurance.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/ container end -->
+</section>
+<!--/ Main container end -->
+{% endblock %}
+
+{% block javascripts %}
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- Style Switcher -->
+<script type="text/javascript" src="plugins/style-switcher.js"></script>
+<!-- Owl Carousel -->
+<script type="text/javascript" src="plugins/owl/owl.carousel.js"></script>
+<!-- PrettyPhoto -->
+<script type="text/javascript" src="plugins/jquery.prettyPhoto.js"></script>
+<!-- Bxslider -->
+<script type="text/javascript" src="plugins/flex-slider/jquery.flexslider.js"></script>
+<!-- CD Hero slider -->
+<script type="text/javascript" src="plugins/cd-hero/cd-hero.js"></script>
+<!-- Isotope -->
+<script type="text/javascript" src="plugins/isotope.js"></script>
+<script type="text/javascript" src="plugins/ini.isotope.js"></script>
+<!-- Wow Animation -->
+<script type="text/javascript" src="plugins/wow.min.js"></script>
+<!-- Eeasing -->
+<script type="text/javascript" src="plugins/jquery.easing.1.3.js"></script>
+<!-- Counter -->
+<script type="text/javascript" src="plugins/jquery.counterup.min.js"></script>
+<!-- Waypoints -->
+<script type="text/javascript" src="plugins/waypoints.min.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+<script src="plugins/google-map/gmap.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+
+{% endblock %}

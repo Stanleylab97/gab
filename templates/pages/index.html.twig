@@ -1,0 +1,474 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<!-- Slider start -->
+<section id="home" class="p-0">
+	<div id="main-slide" class="carousel slide" data-ride="carousel">
+		<div class="overlay"></div>
+		<ol class="carousel-indicators">
+			<li data-target="#main-slide" data-slide-to="0" class="active"></li>
+			<li data-target="#main-slide" data-slide-to="1"></li>
+			<li data-target="#main-slide" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img class="img-fluid" src="{{ asset('images/slider2/bg1.jpg') }}" alt="slider">
+				<div class="slider-content">
+					<div class="col-md-12 text-center">
+						<h2 class="animated2">
+							Bienvenue à
+						</h2>
+						<h3 class="animated3">
+							La Générale des Assurances du Bénin
+						</h3>
+						
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img class="img-fluid" src="images/slider2/bg2.jpg" alt="slider">
+				<div class="slider-content">
+					<div class="col-md-12 text-center">
+						<h2 class="animated4">
+							Des garanties d'assurance
+						</h2>
+						<h3 class="animated5">
+							au juste prix
+						</h3>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img class="img-fluid" src="images/slider2/bg3.jpg" alt="slider">
+				<div class="slider-content">
+					<div class="col-md-12 text-center">
+						<h2 class="animated7">
+							Des conseillers commerciaux 
+						</h2>
+						<h3 class="animated8">
+							toujours plus proches de vous
+						</h3>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control carousel-control-prev" href="#main-slide" data-slide="prev">
+			<span><i class="fa fa-angle-left"></i></span>
+		</a>
+		<a class="right carousel-control carousel-control-next" href="#main-slide" data-slide="next">
+			<span><i class="fa fa-angle-right"></i></span>
+		</a>
+	</div>
+</section>
+<!--/ Slider end -->
+
+<!-- About tab start -->
+<section id="about" class="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 heading text-center">
+				<span class="icon-pentagon wow bounceIn"><i class="fa fa-meh-o"></i></span>
+				<h2 class="title2">En savoir plus sur notre compagnie
+					<span class="title-desc">Une équipe expérimentée depuis plus de 20 ans</span>
+				</h2>
+			</div>
+		</div> <!-- Title row end -->
+		<!-- featured tab -->
+		<div class="row featured-tab">
+			<div class="col-md-3 col-sm-5">
+				<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<a class="animated fadeIn nav-link mb-1 active d-flex align-items-center" data-toggle="pill" href="#tab_1"
+						role="tab" aria-selected="true">
+						<i class="fa fa-info-circle mr-4 h3 mb-0"></i>
+						<span class="h4 mb-0 font-weight-bold">Nos valeurs</span>
+					</a>
+					<a class="animated fadeIn nav-link mb-1 d-flex align-items-center" data-toggle="pill" href="#tab_2" role="tab"
+						aria-selected="true">
+						<i class="fa fa-briefcase mr-4 h3 mb-0"></i>
+						<span class="h4 mb-0 font-weight-bold">Notre vision</span>
+					</a>
+					<a class="animated fadeIn nav-link mb-1 d-flex align-items-center" data-toggle="pill" href="#tab_3" role="tab"
+						aria-selected="true">
+						<i class="fa fa-android mr-4 h3 mb-0"></i>
+						<span class="h4 mb-0 font-weight-bold">Notre mission</span>
+					</a>
+					<a class="animated fadeIn nav-link mb-1 d-flex align-items-center" data-toggle="pill" href="#tab_4" role="tab"
+						aria-selected="true">
+						<i class="fa fa-pagelines mr-4 h3 mb-0"></i>
+						<span class="h4 mb-0 font-weight-bold">Notre signature</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-9 col-sm-7">
+				<div class="tab-content" id="v-pills-tabContent">
+					<div class="tab-pane pl-sm-5 fade show active animated fadeInLeft" id="tab_1" role="tabpanel">
+						<img class="img-fluid float-left mr-3" src="{{ asset('images/valeurs.png') }}" alt="">
+						
+					</div>
+					<div class="tab-pane pl-sm-5 fade animated fadeInLeft" id="tab_2" role="tabpanel">
+						<img class="img-fluid " src="{{ asset('images/vision.png') }}" alt="">
+						
+					</div>
+					<div class="tab-pane pl-sm-5 fade animated fadeInLeft" id="tab_3" role="tabpanel">
+					<img class="img-fluid " src="{{ asset('images/mission.png') }}" alt="">
+					
+					</div>
+					<div class="tab-pane pl-sm-5 fade animated fadeInLeft" id="tab_4" role="tabpanel">
+						<img class="img-fluid " src="{{ asset('images/signature.png') }}" alt="">
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div><!-- Container end -->
+</section><!-- About end -->
+
+<section id="image-block" class="image-block p-0">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 ts-padding"
+				style="height:650px;background:url(images/image-block-bg.jpg) 50% 50% / cover no-repeat;">
+			</div>
+			<div class="col-md-6 ts-padding img-block-right">
+				<div class="img-block-head text-center">
+					<h2>Know More About Our Company</h2>
+					<h3>Why Choose Us</h3>
+					<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+						Proin gravida nibh vel velit auctor Aenean sollicitudin, adipisicing elit sed lorem quis bibendum auctor.
+					</p>
+				</div>
+
+				<div class="gap-30"></div>
+
+				<div class="image-block-content">
+					<span class="feature-icon float-left"><i class="fa fa-bicycle"></i></span>
+					<div class="feature-content">
+						<h3>Tons of Features</h3>
+						<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut</p>
+					</div>
+				</div>
+				<!--/ End 1st block -->
+
+				<div class="image-block-content">
+					<span class="feature-icon float-left"><i class="fa fa-diamond"></i></span>
+					<div class="feature-content">
+						<h3>PowerPack Theme</h3>
+						<p>Proin gravida nibh vel velit auctor Aenean sollicitudin adipisicing</p>
+					</div>
+				</div>
+				<!--/ End 1st block -->
+
+				<div class="image-block-content">
+					<span class="feature-icon float-left"><i class="fa fa-street-view"></i></span>
+					<div class="feature-content">
+						<h3>Day Night Support</h3>
+						<p>Simply dummy text and typesettings industry has been the industry</p>
+					</div>
+				</div>
+				<!--/ End 1st block -->
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<!-- Portfolio start -->
+<section id="portfolio" class="portfolio portfolio-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 heading text-center">
+				<span class="icon-pentagon wow bounceIn"><i class="fa fa-suitcase"></i></span>
+				<h2 class="title2">Nos dernières oeuvres sociales
+					<span class="title-desc">Votre bien être nous préoccupe</span>
+				</h2>
+			</div>
+		</div> <!-- Title row end -->
+
+		<!--Isotope filter start -->
+		<div class="row text-center">
+			<div class="col-12">
+				<div class="isotope-nav" data-isotope-nav="isotope">
+					<ul>
+						<li><a href="#" class="active" data-filter="*">Vue d'ensemble</a></li>
+						<li><a href="#" data-filter=".web-design">Santé</a></li>
+						<li><a href="#" data-filter=".development">Education</a></li>
+						<li><a href="#" data-filter=".joomla">Conférences</a></li>
+						<li><a href="#" data-filter=".wordpress">Sport</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- Isotope filter end -->
+
+		<div id="isotope" class="row isotope">
+			<div class="col-sm-3 web-design isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img src="images/portfolio/portfolio1.jpg" alt="">
+						<figcaption>
+							<h3>Startup Business</h3>
+							<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+							<a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg1.jpg"><i
+									class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+			</div><!-- Isotope item end -->
+
+			<div class="col-sm-3 development isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img src="images/portfolio/portfolio2.jpg" alt="">
+						<figcaption>
+							<h3>Easy to Lanunch</h3>
+							<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+							<a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg2.jpg"><i
+									class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+			</div><!-- Isotope item end -->
+
+			<div class="col-sm-3 joomla isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img src="images/portfolio/portfolio3.jpg" alt="">
+						<figcaption>
+							<h3>Your Business</h3>
+							<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+							<a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg3.jpg"><i
+									class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+			</div><!-- Isotope item end -->
+
+			<div class="col-sm-3 wordpress isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img src="images/portfolio/portfolio4.jpg" alt="">
+						<figcaption>
+							<h3>Prego Match</h3>
+							<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+							<a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg4.jpg"><i
+									class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+			</div><!-- Isotope item end -->
+
+			<div class="col-sm-3 joomla isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img src="images/portfolio/portfolio5.jpg" alt="">
+						<figcaption>
+							<h3>Fashion Brand</h3>
+							<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+							<a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg5.jpg"><i
+									class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+			</div><!-- Isotope item end -->
+
+			<div class="col-sm-3 development isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img src="images/portfolio/portfolio6.jpg" alt="">
+						<figcaption>
+							<h3>The Insidage</h3>
+							<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+							<a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg1.jpg"><i
+									class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+			</div><!-- Isotope item end -->
+
+			<div class="col-sm-3 development isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img src="images/portfolio/portfolio7.jpg" alt="">
+						<figcaption>
+							<h3>Light Carpet</h3>
+							<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+							<a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg2.jpg"><i
+									class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+			</div><!-- Isotope item end -->
+
+			<div class="col-sm-3 development isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img src="images/portfolio/portfolio8.jpg" alt="">
+						<figcaption>
+							<h3>Amazing Keyboard</h3>
+							<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+							<a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg3.jpg"><i
+									class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+			</div><!-- Isotope item end -->
+		</div><!-- Isotope content end -->
+	</div><!-- Container end -->
+</section><!-- Portfolio end -->
+
+
+
+
+
+<!-- Service box start -->
+<section id="feature" class="feature">
+	<div class="container">
+
+		<div class="row">
+			<div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+				<span class="feature-icon float-left"><i class="fa fa-heart-o"></i></span>
+				<div class="feature-content">
+					<h3>Clean &amp; Modern Design</h3>
+					<p>Bras urna felis accumsan at ultrde cesid posuere masa socis nautoque penat</p>
+				</div>
+			</div>
+			<!--/ End first featurebox -->
+
+			<div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+				<span class="feature-icon float-left"><i class="fa fa-codepen"></i></span>
+				<div class="feature-content">
+					<h3>Useful Shortcodes</h3>
+					<p>High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua</p>
+				</div>
+			</div>
+			<!--/ End first featurebox -->
+
+			<div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+				<span class="feature-icon float-left"><i class="fa fa-film"></i></span>
+				<div class="feature-content">
+					<h3>Parallax Section</h3>
+					<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut</p>
+				</div>
+			</div>
+			<!--/ End first featurebox -->
+		</div><!-- Content row end -->
+
+		<div class="gap-40"></div>
+
+		<div class="row">
+			<div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+				<span class="feature-icon float-left"><i class="fa fa-newspaper-o"></i></span>
+				<div class="feature-content">
+					<h3>Multipurpose Concept</h3>
+					<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut</p>
+				</div>
+			</div>
+			<!--/ End first featurebox -->
+
+			<div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+				<span class="feature-icon float-left"><i class="fa fa-desktop"></i></span>
+				<div class="feature-content">
+					<h3>Responsive Layout</h3>
+					<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut</p>
+				</div>
+			</div>
+			<!--/ End first featurebox -->
+
+			<div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+				<span class="feature-icon float-left"><i class="fa fa-pagelines"></i></span>
+				<div class="feature-content">
+					<h3>Light wight Performance</h3>
+					<p>High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua</p>
+				</div>
+			</div>
+			<!--/ End first featurebox -->
+
+		</div><!-- Content row end -->
+
+		<div class="gap-40"></div>
+
+		<div class="row">
+			<div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+				<span class="feature-icon float-left"><i class="fa fa-recycle"></i></span>
+				<div class="feature-content">
+					<h3>Free Lifetime Updates</h3>
+					<p>Bras urna felis accumsan at ultrde cesid posuere masa socis nautoque penat</p>
+				</div>
+			</div>
+			<!--/ End first featurebox -->
+
+			<div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+				<span class="feature-icon float-left"><i class="fa fa-diamond"></i></span>
+				<div class="feature-content">
+					<h3>Endless Possibilites</h3>
+					<p>High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua</p>
+				</div>
+			</div>
+			<!--/ End first featurebox -->
+
+			<div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+				<span class="feature-icon float-left"><i class="fa fa-whatsapp"></i></span>
+				<div class="feature-content">
+					<h3>24/7 Live Support</h3>
+					<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut</p>
+				</div>
+			</div>
+			<!--/ End first featurebox -->
+		</div><!-- Content row end -->
+
+	</div>
+	<!--/ Container end -->
+</section>
+<!--/ Service box end -->
+
+
+<!-- Parallax 2 start -->
+<section class="parallax parallax2">
+	<div class="parallax-overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2>Are You Ready to Buy This Template!</h2>
+				<h3>Just Click Button and Use Your Own</h3>
+				<p>
+					<a href="#" class="btn btn-primary white">Purchase Now</a>
+					<a href="#" class="btn btn-primary solid">Get In Touch</a>
+				</p>
+			</div>
+		</div>
+	</div><!-- Container end -->
+</section><!-- Parallax 2 end -->
+
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('plugins/jQuery/jquery.min.js') }}"></script>
+<!-- Bootstrap JS -->
+<script src="{{ asset('plugins/bootstrap/bootstrap.min.js') }}"></script>
+<!-- Style Switcher -->
+<script type="text/javascript" src="{{ asset('plugins/style-switcher.js') }}"></script>
+<!-- Owl Carousel -->
+<script type="text/javascript" src="{{ asset('plugins/owl/owl.carousel.js') }}"></script>
+<!-- PrettyPhoto -->
+<script type="text/javascript" src="{{ asset('plugins/jquery.prettyPhoto.js') }}"></script>
+<!-- Bxslider -->
+<script type="text/javascript" src="{{ asset('plugins/flex-slider/jquery.flexslider.js') }}"></script>
+<!-- CD Hero slider -->
+<script type="text/javascript" src="{{ asset('plugins/cd-hero/cd-hero.js') }}"></script>
+<!-- Isotope -->
+<script type="text/javascript" src="{{ asset('plugins/isotope.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/ini.isotope.js') }}"></script>
+<!-- Wow Animation -->
+<script type="text/javascript" src="{{ asset('plugins/wow.min.js') }}"></script>
+<!-- Eeasing -->
+<script type="text/javascript" src="{{ asset('plugins/jquery.easing.1.3.js') }}"></script>
+<!-- Waypoints -->
+<script type="text/javascript" src="{{ asset('plugins/waypoints.min.js') }}"></script>
+
+
+{% endblock %}

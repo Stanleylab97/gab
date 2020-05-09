@@ -17,6 +17,65 @@ class PagesController extends AbstractController
         ]);
     }
 
+     /**
+     * @Route("/devis", name="devis")
+     */
+    public function devis()
+    {
+        return $this->render('pages/devis.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+    /**
+     * @Route("/reseau", name="reseau")
+     */
+    public function reseau()
+    {
+        return $this->render('pages/reseau.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+     /**
+     * @Route("/offres", name="offres")
+     */
+    public function offres()
+    {
+        return $this->render('pages/offres.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+    /**
+     * @Route("/stageac", name="stageac")
+     */
+    public function stageac()
+    {
+        return $this->render('pages/stageac.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+     /**
+     * @Route("/stagepro", name="stagepro")
+     */
+    public function stagepro()
+    {
+        return $this->render('pages/stageac.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+    /**
+     * @Route("/emploi", name="emploi")
+     */
+    public function emploi()
+    {
+        return $this->render('pages/stages.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
       /**
      * @Route("/contact", name="contact")
      */
@@ -29,11 +88,11 @@ class PagesController extends AbstractController
 
 
       /**
-     * @Route("/services", name="services")
+     * @Route("/products", name="products")
      */
-    public function services()
+    public function produits()
     {
-        return $this->render('pages/services.html.twig', [
+        return $this->render('pages/products.html.twig', [
             'controller_name' => 'PagesController',
         ]);
     }

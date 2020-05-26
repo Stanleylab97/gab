@@ -1,1 +1,123 @@
 {% extends 'base.html.twig' %}
+
+{% block content %}
+	<div id="banner-area">
+		<img src="images/banner/banner1.jpg" alt=""/>
+		<div class="parallax-overlay"></div>
+		<!-- Subpage title start -->
+		<div class="banner-title-content">
+			<div class="text-center">
+				<h2>demander un devis</h2>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb justify-content-center">
+						<li class="breadcrumb-item">
+							<a href="/">Accueil</a>
+						</li>
+						<li class="breadcrumb-item text-white" aria-current="devis">Devis</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<!-- Subpage title end -->
+	</div>
+	<!-- Banner area end -->
+	<br>
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="form-check col-md-4">
+			<button class="btn btn-primary" id="f1">Automobile</button>
+			<button class="btn btn-primary" id="f2">Santé</button>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+
+	<div class="col-md-12"><br>
+		<form id="form1">
+			<div class="form-group row">
+				<div class="col-md-1"></div>
+				<label for="colFormLabelSm" class="col-md-2 col-form-label col-form-label-lg">Nom et prénoms</label>
+				<div class="col-md-7">
+					<input type="text" class="form-control form-control-sm" name="nom" id="colFormLabelSm" placeholder="col-form-label-sm">
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-md-1"></div>
+				<label for="colFormLabel" class="col-md-2 col-form-label col-form-label-lg">Contact</label>
+				<div class="col-md-7">
+					<input type="text" class="form-control" id="colFormLabel" placeholder="Ex: 21000000">
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-md-1"></div>
+				<label for="colFormLabelLg" class="col-md-2 col-form-label col-form-label-lg">Marque</label>
+				<div class="col-md-7">
+					<input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Marque du véhicule">
+				</div>
+			</div>
+            <div class="form-group row">
+				<div class="col-md-1"></div>
+				<label for="colFormLabelLg" class="col-md-2 col-form-label col-form-label-lg">Type de véhicule</label>
+				<div class="col-md-7">
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option value="1">5 places</option>
+						<option value="2">Mini-Bus</option>
+						<option value="3">Bachée</option>
+						<option value="4">Véhicule de transport</option>
+						<option value="5">Titan</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<div class="col-md-1"></div>
+				<label for="colFormLabelLg" class="col-md-2 col-form-label col-form-label-lg">Puissance</label>
+				<div class="col-md-7">
+					<input type="number" name="puissance" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Nombre de chevaux">
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<div class="col-md-1"></div>
+				<label for="colFormLabelLg" class="col-md-2 col-form-label col-form-label-lg">Durée</label>
+				<div class="col-md-7">
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option value="30">1 mois</option>
+						<option value="60">2 mois</option>
+						<option value="90">3 mois</option>
+						<option value="180">6 mois</option>
+						<option value="360">1 an</option>
+                        <option value="720">2 ans</option>
+					</select>
+				</div>
+			</div>
+            <div class="form-group row">
+				<div class="col-md-1"></div>
+				<label for="colFormLabelLg" class="col-md-2 col-form-label col-form-label-lg">Puissance</label>
+				<div class="col-md-7">
+					<input type="number" name="puissance" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Nombre de chevaux">
+				</div>
+			</div>
+
+		</form>
+
+		<form id="form2" style="display: none">
+			<input type="text" placeholder="form 2">
+			<input type="text" placeholder="jghhuvu">
+
+			<button>form 2</button>
+		</form>
+	</div>
+
+
+</div>
+<br><br><br><br><br><br><br><br><br><br>{% endblock %}{% block javascripts %}
+<script>
+	document.getElementById('f1').addEventListener('click', () => {
+document.getElementById('form2').style.display = 'none';
+document.getElementById('form1').style.display = 'block';
+})
+document.getElementById('f2').addEventListener('click', () => {
+document.getElementById('form1').style.display = 'none';
+document.getElementById('form2').style.display = 'block';
+})
+</script>{% endblock %}

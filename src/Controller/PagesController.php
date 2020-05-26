@@ -18,7 +18,7 @@ class PagesController extends AbstractController
     }
 
      /**
-     * @Route("/devis", name="devis")
+     * @Route("devis", name="devis")
      */
     public function devis()
     {
@@ -93,6 +93,26 @@ class PagesController extends AbstractController
     public function produits()
     {
         return $this->render('pages/products.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+    /**
+     * @Route("/organisation", name="organisation")
+     */
+    public function organisation()
+    {
+        return $this->render('pages/organisation.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+    /**
+     * @Route("/historique", name="historique")
+     */
+    public function historique()
+    {
+        return $this->render('pages/historique.html.twig', [
             'controller_name' => 'PagesController',
         ]);
     }

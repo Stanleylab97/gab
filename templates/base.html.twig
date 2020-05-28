@@ -90,16 +90,16 @@
 								<div class="dropdown-menu">
 									<a class="dropdown-item" href="{{path('historique')}}">Historique</a>
 									<a class="dropdown-item" href="{{path('organisation')}}">Organisation</a>
-									<a class="dropdown-item" href="testimonial.html">Avis de nos clients</a>
+									<a class="dropdown-item" href="{{path('testimonials')}}">Avis de nos clients</a>
 								</div>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="/products">Nos produits</a>
+								<a class="nav-link" href="{{path('products')}}">Nos produits</a>
 							</li>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/devis">Devis</a>
+						<a class="nav-link" href="{{path('devis')}}">Devis</a>
 					</li>
 				</a>
 			</li>
@@ -108,18 +108,18 @@
 					Carrières
 				</a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="/offres">Offres</a>
-					<a class="dropdown-item" href="/stageac">Demande de stage</a>
-					<a class="dropdown-item" href="/stagepro">Demande d'emploi</a>
+					<a class="dropdown-item" href="{{path('offres')}}">Offres</a>
+					<a class="dropdown-item" href="{{path('stageac')}}">Demande de stage</a>
+					<a class="dropdown-item" href="{{path('stagepro')}}">Demande d'emploi</a>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/reseau">Notre réseau</a>
+				<a class="nav-link" href="{{path('reseau')}}">Notre réseau</a>
 			</li>
 		</body>
 	</html>
 </a></li><li class="nav-item">
-<a class="nav-link" href="/contact">Contact</a></li></a></li></ul></div></nav></div></header>{% endblock %}<!--/ Header end -->
+<a class="nav-link" href="{{path('contact')}}">Contact</a></li></a></li></ul></div></nav></div></header>{% endblock %}<!--/ Header end -->
 
 {% block content %}
   Mon contenu

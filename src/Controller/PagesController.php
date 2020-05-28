@@ -76,6 +76,16 @@ class PagesController extends AbstractController
             'controller_name' => 'PagesController',
         ]);
     }
+
+    /**
+     * @Route("/testimonials", name="testimonials")
+     */
+    public function testimoniales()
+    {
+        return $this->render('pages/testimonials.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
       /**
      * @Route("/contact", name="contact")
      */

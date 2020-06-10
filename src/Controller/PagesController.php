@@ -57,22 +57,14 @@ class PagesController extends AbstractController
         ]);
     }
 
-     /**
-     * @Route("/stagepro", name="stagepro")
-     */
-    public function stagepro()
-    {
-        return $this->render('pages/stageac.html.twig', [
-            'controller_name' => 'PagesController',
-        ]);
-    }
+    
 
     /**
      * @Route("/emploi", name="emploi")
      */
     public function emploi()
     {
-        return $this->render('pages/stages.html.twig', [
+        return $this->render('pages/emploi.html.twig', [
             'controller_name' => 'PagesController',
         ]);
     }

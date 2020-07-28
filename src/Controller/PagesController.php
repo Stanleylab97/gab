@@ -99,12 +99,116 @@ class PagesController extends AbstractController
         ]);
     }
 
+     /**
+     * @Route("/org_pro", name="org_pro")
+     */
+    public function org_pro()
+    {
+        return $this->render('pages/organisation_products.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+      /**
+     * @Route("/part_pro", name="part_pro")
+     */
+    public function part_pro()
+    {
+        return $this->render('pages/particular_products.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+
+    /**
+     * @Route("/quiz_rc_sco", name="quiz_rc_sco")
+     */
+    public function quiz_rc_sco()
+    {
+        return $this->render('pages/quiz/rc_scolaire.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+        /**
+     * @Route("/quiz_sante", name="quiz_sante")
+     */
+    public function quiz_sante()
+    {
+        return $this->render('pages/quiz/sante.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+      /**
+     * @Route("/quiz_transport", name="quiz_transport")
+     */
+    public function quiz_transport()
+    {
+        return $this->render('pages/quiz/transport.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+       /**
+     * @Route("/quiz_rcet", name="quiz_rcet")
+     */
+    public function quiz_rcet()
+    {
+        return $this->render('pages/quiz/rcet.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+  /**
+     * @Route("/quiz_auto", name="quiz_auto")
+     */
+    public function quiz_auto()
+    {
+        return $this->render('pages/quiz/automobile.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+     /**
+     * @Route("/quiz_ia", name="quiz_ia")
+     */
+    public function quiz_ia()
+    {
+        return $this->render('pages/quiz/ind_accident.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+      /**
+     * @Route("/quiz_astrim", name="quiz_astrim")
+     */
+    public function quiz_astrim()
+    {
+        return $this->render('pages/quiz/astrim.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+
+
     /**
      * @Route("/organisation", name="organisation")
      */
     public function organisation()
     {
         return $this->render('pages/organisation.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+
+    /**
+     * @Route("/test", name="test")
+     */
+    public function test()
+    {
+        return $this->render('test.html.twig', [
             'controller_name' => 'PagesController',
         ]);
     }

@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block styleheader %}{% endblock %}
+
+{% block content %}
+	<div id="banner-area">
+		<img src="images/banner/banner1.jpg" alt=""/>
+		<div class="parallax-overlay"></div>
+		<!-- Subpage title start -->
+		<div class="banner-title-content">
+			<div class="text-center">
+				<h2>Demander un devis Astrim</h2>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb justify-content-center">
+						<li class="breadcrumb-item">
+							<a href="/">Accueil</a>
+						</li>
+						<li class="breadcrumb-item text-white" aria-current="devis">Devis</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<!-- Subpage title end -->
+	</div>
+	<!-- Banner area end -->
+	<br>
+
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center"><img src="images/logomap.png" style="width: auto; height: auto;max-width: 120px;max-height: 120px" class="rounded" alt="xxx"></div>
+		<div class="col-md-4"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center">
+			<h4>QUESTIONNAIRE ASSURANCE TOUT RISQUE MAISON</h4>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-2"></div>
+
+		<div class="col-md-8">
+			<ul class="stepper horizontal" id="horizontal-stepper">
+				<li class="step active">
+					<div class="step-title waves-effect waves-dark">Step 1</div>
+					<div class="step-new-content">
+						<div class="row">
+							<div class="md-form col-12 ml-auto">
+								<input id="email-horizontal" type="email" class="validate form-control" required>
+								<label for="email-horizontal">Email</label>
+							</div>
+						</div>
+						<div class="step-actions">
+							<button class="waves-effect waves-dark btn btn-sm btn-primary next-step" data-feedback="someFunction21">CONTINUE</button>
+						</div>
+					</div>
+				</li>
+				<li class="step">
+					<div class="step-title waves-effect waves-dark">Step 2</div>
+					<div class="step-new-content">
+						<div class="row">
+							<div class="md-form col-12 ml-auto">
+								<input id="password-horizontal" type="password" class="validate form-control" required>
+								<label for="password-horizontal">Your password</label>
+							</div>
+						</div>
+						<div class="step-actions">
+							<button class="waves-effect waves-dark btn btn-sm btn-primary next-step" data-feedback="someFunction21">CONTINUE</button>
+							<button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step">BACK</button>
+						</div>
+					</div>
+				</li>
+				<li class="step">
+					<div class="step-title waves-effect waves-dark">Step 3</div>
+					<div class="step-new-content">
+						Finish!
+						<div class="step-actions">
+							<button class="waves-effect waves-dark btn-sm btn btn-primary m-0 mt-4" type="button">SUBMIT</button>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	<div class="col-md-2"></div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6"><br/><b>NB : Les réponses du présent questionnaire seront réputées faire partie intégrante du contrat dans son établissement. En conséquence, toute réticences, toute omission, toute réponse ou déclaration inexacte du proposant peut entrainer l’application des sanctions prévues aux articles 18 et 19 du Code CIMA.</b>
+		</div>
+		<div class="col-md-3"></div>
+	</div><br/><br/></div></div>{% endblock %}{% block javascripts %}<!-- jQuery --><script src="plugins/jQuery/jquery.min.js"></script><!-- Bootstrap JS --><script src="plugins/bootstrap/bootstrap.min.js"></script><!-- Style Switcher --><script type="text/javascript" src="plugins/style-switcher.js"></script><!-- Owl Carousel --><script type="text/javascript" src="plugins/owl/owl.carousel.js"></script><!-- PrettyPhoto --><script type="text/javascript" src="plugins/jquery.prettyPhoto.js"></script><!-- Bxslider --><script type="text/javascript" src="plugins/flex-slider/jquery.flexslider.js"></script><!-- CD Hero slider --><script type="text/javascript" src="plugins/cd-hero/cd-hero.js"></script><!-- Isotope --><script type="text/javascript" src="plugins/isotope.js"></script><script type="text/javascript" src="plugins/ini.isotope.js"></script><!-- Wow Animation --><script type="text/javascript" src="plugins/wow.min.js"></script><!-- Eeasing --><script type="text/javascript" src="plugins/jquery.easing.1.3.js"></script><!-- Counter --><script type="text/javascript" src="plugins/jquery.counterup.min.js"></script><!-- Waypoints --><script type="text/javascript" src="plugins/waypoints.min.js"></script><!-- Nbco --><script type="text/javascript" src="plugins/nprogress/nprogress.js"></script><!-- Main Script --><script src="js/script.js"></script><script>
+$(document).ready(function () {
+$('.stepper').mdbStepper();
+})
+
+function someFunction21() {
+setTimeout(function () {
+$('#horizontal-stepper').nextStep();
+}, 2000);
+}</script>{% endblock %}

@@ -1,0 +1,286 @@
+{% extends 'base.html.twig' %}
+
+{% block styleheader %}
+	<link rel="stylesheet" href="{{ asset('plugins/nprogress/nprogress.css') }}">
+	<style type="text/css">
+		table {
+			margin: 18px 0;
+			width: 100%;
+			border-collapse: collapse;
+		}
+		table th,
+		table td {
+			text-align: left;
+			padding: 6px;
+		}
+		table,
+		th,
+		td {
+			border: 1px solid #000;
+		}
+	</style>
+
+
+{% endblock %}
+
+{% block content %}
+	<div id="banner-area">
+		<img src="images/banner/banner1.jpg" alt=""/>
+		<div class="parallax-overlay"></div>
+		<!-- Subpage title start -->
+		<div class="banner-title-content">
+			<div class="text-center">
+				<h2>Demander un devis Individuel Accident</h2>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb justify-content-center">
+						<li class="breadcrumb-item">
+							<a href="/">Accueil</a>
+						</li>
+						<li class="breadcrumb-item text-white" aria-current="devis">Devis</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<!-- Subpage title end -->
+	</div>
+	<!-- Banner area end -->
+	<br>
+
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center"><img src="images/logomap.png" style="width: auto; height: auto;max-width: 120px;max-height: 120px" class="rounded" alt="xxx"></div>
+		<div class="col-md-4"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center">
+			<h4>QUESTIONNAIRE Individuel Accident</h4>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-2"></div>
+
+		<div class="col-md-8">
+			<p>Les rubriques précédées d'un (*) doivent impérativement être renseignées.</p>
+			<table width="100%" border="1" cellspacing="1" cellpadding="1">
+				<tr>
+					<td>
+						<h5>IDENTIFICATION DE L'ASSURE</h5>
+					</td>
+
+				</tr>
+			</table>
+			<br/>
+			<form>
+				<div class="form-group row">
+					<label for="username" class="col-sm-4 col-form-label">Nom et Prénoms</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="username">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="activity" class="col-sm-4 col-form-label">Activité</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="activity">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="category" class="col-sm-4 col-form-label">E-mail</label>
+					<div class="col-sm-8">
+						<input type="mail" class="form-control" id="category">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="adresse" class="col-sm-4 col-form-label">BP</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control" id="category">
+					</div>
+
+					<label for="tel" class="col-sm-2 col-form-label">Téléphone</label>
+					<div class="col-sm-3">
+						<input type="text" lenght="8" class="form-control" id="tel">
+					</div>
+
+				</div><br/>
+
+				<table width="100%" border="1" cellspacing="1" cellpadding="1">
+					<tr>
+						<td>
+							<h5>GARANTIES ET CAPITAUX SOUHAITES
+							</h5>
+						</td>
+
+					</tr>
+				</table>
+				<br/>
+				<div class="table-responsive-md">
+
+					<table class="table table-bordered" id="vehicules">
+
+						<tr>
+							<th>Garanties</th>
+							<th>Statut</th>
+							<th>Capitaux</th>
+						</tr>
+						<tr>
+							<td>Décès</td>
+							<td>
+								<div class="custom-control custom-switch">
+									<input type="checkbox" class="custom-control-input" id="s_deces">
+									<label class="custom-control-label" for="s_deces">Activation</label>
+
+								</div>
+							</td>
+							<td><input id="m_deces" type="number"/></td>
+						</tr>
+						<tr>
+							<td>Invalidité</td>
+							<td>
+								<div class="custom-control custom-switch">
+									<input type="checkbox" class="custom-control-input" id="s_invalidite">
+									<label class="custom-control-label" for="s_invalidite">Activation</label>
+								</td>
+							</td>
+							<td><input id="m_invalidite" type="number"/></td>
+						</tr>
+						<tr>
+							<td>Frais médicaux</td>
+							<td>
+								<div class="custom-control custom-switch">
+									<input type="checkbox" class="custom-control-input" id="s_fmp">
+									<label class="custom-control-label" for="s_fmp">Activation</label>
+								</td>
+							</td>
+							<td><input id="m_fmp" type="number"/></td>
+
+						</tr>
+
+						<tr></tr>
+
+					</table>
+				</div><br/>
+
+				<div class="form-group row">
+					<label for="nbSinistres" class="col-sm-3 col-form-label">Date de naissance :</label>
+
+					<div class="col-sm-3">
+						<input type="date" class="form-control" id="dateNais">
+					</div>
+
+					<label for="conseq" class="col-sm-3 col-form-label">Lieu</label>
+
+
+					<div class="col-sm-3">
+						<input type="text" lenght="8" class="form-control" id="lieu">
+					</div>
+
+				</div>
+
+				<div class="form-group row">
+					<label for="population" class="col-sm-3 col-form-label">Couverture du contrat</label>
+					<div class="col-sm-9">
+						<select class="form-control">
+							<option value="1">Faîtes votre choix</option>
+							<option value="1">1 an</option>
+							<option value="2">2 ans</option>
+							<option value="5">5 ans</option>
+							<option value="10">10 ans</option>
+						</select>
+					</div>
+				</div>
+
+				<br/>
+				<h5>Bénéficiaire en cas de décès:</h5>
+
+				<div class="form-check form-check-inline">
+					<label class="form-check-label" for="inlineCheckbox1">Conjoint(e)</label>
+					<input class="form-check-input" name="beneficiaire" type="radio" id="inlineCheckbox1" value="option1">
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label" for="inlineCheckbox2">Enfants nés et à naître</label>
+					<input class="form-check-input" name="beneficiaire" type="radio" id="inlineCheckbox2" value="option2">
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label" for="autre">Autre</label>
+					<input class="form-check-input" name="beneficiaire" type="radio" id="autre" value="option2">
+					<div class="col-sm-12">
+						<input type="text" lenght="8" class="form-control" id="precision_autre" placeholder="Ex: COSSI Paul"/>
+					</div>
+
+				</div>
+
+				<br/>
+				
+
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4"><br/><button type="submit" class="btn btn-warning">Envoyer la demande</button>
+					</div>
+					<div class="col-md-4"></div>
+				</div><br/><br/></form>
+		</div>
+	</div>
+	<div class="col-md-2"></div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6"><br/><b>NB : Les réponses du présent questionnaire seront réputées faire partie intégrante du contrat dans son établissement. En conséquence, toute réticences, toute omission, toute réponse ou déclaration inexacte du proposant peut entrainer l’application des sanctions prévues aux articles 18 et 19 du Code CIMA.</b>
+		</div>
+		<div class="col-md-3"></div>
+	</div><br/><br/></div></div>{% endblock %}{% block javascripts %}<!-- jQuery --><script src="plugins/jQuery/jquery.min.js"></script><!-- Bootstrap JS --><script src="plugins/bootstrap/bootstrap.min.js"></script><!-- Style Switcher --><script type="text/javascript" src="plugins/style-switcher.js"></script><!-- Owl Carousel --><script type="text/javascript" src="plugins/owl/owl.carousel.js"></script><!-- PrettyPhoto --><script type="text/javascript" src="plugins/jquery.prettyPhoto.js"></script><!-- Bxslider --><script type="text/javascript" src="plugins/flex-slider/jquery.flexslider.js"></script><!-- CD Hero slider --><script type="text/javascript" src="plugins/cd-hero/cd-hero.js"></script><!-- Isotope --><script type="text/javascript" src="plugins/isotope.js"></script><script type="text/javascript" src="plugins/ini.isotope.js"></script><!-- Wow Animation --><script type="text/javascript" src="plugins/wow.min.js"></script><!-- Eeasing --><script type="text/javascript" src="plugins/jquery.easing.1.3.js"></script><!-- Counter --><script type="text/javascript" src="plugins/jquery.counterup.min.js"></script><!-- Waypoints --><script type="text/javascript" src="plugins/waypoints.min.js"></script><!-- Nbco --><script type="text/javascript" src="plugins/nprogress/nprogress.js"></script><!-- Main Script --><script src="js/script.js"></script><script type="text/javascript">
+$(document).ready(function () {
+$("#m_deces").prop("disabled", true);
+$("#m_invalidite").prop("disabled", true);
+$("#m_fmp").prop("disabled", true);
+$("#precision_autre").hide();
+
+
+
+});
+
+$('#s_deces').click(function () {
+if ($(this).is(":checked")) {
+
+$("#m_deces").prop("disabled", false);
+
+} else if ($(this).is(":not(:checked)")) {
+$("#m_deces").prop("disabled", true);
+}
+});
+
+$('#s_invalidite').click(function () {
+
+if ($(this).is(":checked")) {
+
+$("#m_invalidite").prop("disabled", false);
+
+
+} else if ($(this).is(":not(:checked)")) {
+$("#m_invalidite").prop("disabled", true);
+
+}
+});
+
+$('#s_fmp').click(function () {
+if ($(this).is(":checked")) {
+
+$("#m_fmp").prop("disabled", false);
+
+} else if ($(this).is(":not(:checked)")) {
+$("#m_fmp").prop("disabled", true);
+}
+});
+
+$('#autre').click(function () {
+if ($(this).is(":checked")) {
+
+$("#m_fmp").show();
+
+} else if ($(this).is(":not(:checked)")) {
+$("#m_fmp").hide();
+
+}
+});
+
+</script>{% endblock %}

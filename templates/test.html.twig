@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta
+		http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- Meta, title, CSS, favicons, etc. -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>GAB| Devis
+		</title>
+
+		<!-- Bootstrap -->
+		<link href="{{ asset('plugins/bootstrap_stepper/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
+		<link
+		href="{{ asset('plugins/switchery/dist/switchery.min.css')}}" rel="stylesheet">
+
+		<!-- Font Awesome -->
+		<link
+		href="{{ asset('plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+
+
+		<!-- NProgress -->
+		<link
+		href="{{ asset('plugins/nprogress/nprogress.css')}}" rel="stylesheet">
+
+
+		<!-- Custom Theme Style -->
+		<link href="{{ asset('build/css/custom.min.css')}}" rel="stylesheet">
+
+	</head>
+
+	<body class="nav-md">
+		<div class="container body">
+			<div class="main_container">
+				<div class="col-md-3 left_col">
+					<div class="left_col scroll-view">
+						<div class="navbar nav_title" style="border: 0;">
+							<a href="index.html" class="site_title">
+								<i class="fa fa-paw"></i>
+								<span>Gentelella Alela!</span>
+							</a>
+						</div>
+
+						<div class="clearfix"></div>
+
+						<!-- menu profile quick info -->
+						<div class="profile clearfix">
+							<div class="profile_pic">
+								<img src="images/img.jpg" alt="..." class="img-circle profile_img">
+							</div>
+							<div class="profile_info">
+								<span>Welcome,</span>
+								<h2>John Doe</h2>
+							</div>
+						</div>
+						<!-- /menu profile quick info -->
+
+						<br/>
+
+						<!-- sidebar menu -->
+						<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+							<div class="menu_section">
+								<h3>General</h3>
+								<ul class="nav side-menu">
+									<li>
+										<a>
+											<i class="fa fa-home"></i>
+											Home
+											<span class="fa fa-chevron-down"></span>
+										</a>
+										<ul class="nav child_menu">
+											<li>
+												<a href="index.html">Dashboard</a>
+											</li>
+											<li>
+												<a href="index2.html">Dashboard2</a>
+											</li>
+											<li>
+												<a href="index3.html">Dashboard3</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a>
+											<i class="fa fa-edit"></i>
+											Forms
+											<span class="fa fa-chevron-down"></span>
+										</a>
+										<ul class="nav child_menu">
+											<li>
+												<a href="form.html">General Form</a>
+											</li>
+											<li>
+												<a href="form_advanced.html">Advanced Components</a>
+											</li>
+											<li>
+												<a href="form_validation.html">Form Validation</a>
+											</li>
+											<li>
+												<a href="form_wizards.html">Form Wizard</a>
+											</li>
+											<li>
+												<a href="form_upload.html">Form Upload</a>
+											</li>
+											<li>
+												<a href="form_buttons.html">Form Buttons</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a>
+											<i class="fa fa-desktop"></i>
+											UI Elements
+											<span class="fa fa-chevron-down"></span>
+										</a>
+										<ul class="nav child_menu">
+											<li>
+												<a href="general_elements.html">General Elements</a>
+											</li>
+											<li>
+												<a href="media_gallery.html">Media Gallery</a>
+											</li>
+											<li>
+												<a href="typography.html">Typography</a>
+											</li>
+											<li>
+												<a href="icons.html">Icons</a>
+											</li>
+											<li>
+												<a href="glyphicons.html">Glyphicons</a>
+											</li>
+											<li>
+												<a href="widgets.html">Widgets</a>
+											</li>
+											<li>
+												<a href="invoice.html">Invoice</a>
+											</li>
+											<li>
+												<a href="inbox.html">Inbox</a>
+											</li>
+											<li>
+												<a href="calendar.html">Calendar</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a>
+											<i class="fa fa-table"></i>
+											Tables
+											<span class="fa fa-chevron-down"></span>
+										</a>
+										<ul class="nav child_menu">
+											<li>
+												<a href="tables.html">Tables</a>
+											</li>
+											<li>
+												<a href="tables_dynamic.html">Table Dynamic</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a>
+											<i class="fa fa-bar-chart-o"></i>
+											Data Presentation
+											<span class="fa fa-chevron-down"></span>
+										</a>
+										<ul class="nav child_menu">
+											<li>
+												<a href="chartjs.html">Chart JS</a>
+											</li>
+											<li>
+												<a href="chartjs2.html">Chart JS2</a>
+											</li>
+											<li>
+												<a href="morisjs.html">Moris JS</a>
+											</li>
+											<li>
+												<a href="echarts.html">ECharts</a>
+											</li>
+											<li>
+												<a href="other_charts.html">Other Charts</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a>
+											<i class="fa fa-clone"></i>Layouts
+											<span class="fa fa-chevron-down"></span>
+										</a>
+										<ul class="nav child_menu">
+											<li>
+												<a href="fixed_sidebar.html">Fixed Sidebar</a>
+											</li>
+											<li>
+												<a href="fixed_footer.html">Fixed Footer</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="menu_section">
+								<h3>Live On</h3>
+								<ul class="nav side-menu">
+									<li>
+										<a>
+											<i class="fa fa-bug"></i>
+											Additional Pages
+											<span class="fa fa-chevron-down"></span>
+										</a>
+										<ul class="nav child_menu">
+											<li>
+												<a href="e_commerce.html">E-commerce</a>
+											</li>
+											<li>
+												<a href="projects.html">Projects</a>
+											</li>
+											<li>
+												<a href="project_detail.html">Project Detail</a>
+											</li>
+											<li>
+												<a href="contacts.html">Contacts</a>
+											</li>
+											<li>
+												<a href="profile.html">Profile</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a>
+											<i class="fa fa-windows"></i>
+											Extras
+											<span class="fa fa-chevron-down"></span>
+										</a>
+										<ul class="nav child_menu">
+											<li>
+												<a href="page_403.html">403 Error</a>
+											</li>
+											<li>
+												<a href="page_404.html">404 Error</a>
+											</li>
+											<li>
+												<a href="page_500.html">500 Error</a>
+											</li>
+											<li>
+												<a href="plain_page.html">Plain Page</a>
+											</li>
+											<li>
+												<a href="login.html">Login Page</a>
+											</li>
+											<li>
+												<a href="pricing_tables.html">Pricing Tables</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a>
+											<i class="fa fa-sitemap"></i>
+											Multilevel Menu
+											<span class="fa fa-chevron-down"></span>
+										</a>
+										<ul class="nav child_menu">
+											<li>
+												<a href="#level1_1">Level One</a>
+											</li>
+											<li>
+												<a>Level One<span class="fa fa-chevron-down"></span>
+												</a>
+												<ul class="nav child_menu">
+													<li class="sub_menu">
+														<a href="level2.html">Level Two</a>
+													</li>
+													<li>
+														<a href="#level2_1">Level Two</a>
+													</li>
+													<li>
+														<a href="#level2_2">Level Two</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="#level1_2">Level One</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<i class="fa fa-laptop"></i>
+											Landing Page
+											<span class="label label-success pull-right">Coming Soon</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+						<!-- /sidebar menu -->
+
+						<!-- /menu footer buttons -->
+						<div class="sidebar-footer hidden-small">
+							<a data-toggle="tooltip" data-placement="top" title="Settings">
+								<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+							</a>
+							<a data-toggle="tooltip" data-placement="top" title="FullScreen">
+								<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+							</a>
+							<a data-toggle="tooltip" data-placement="top" title="Lock">
+								<span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+							</a>
+							<a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+								<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+							</a>
+						</div>
+						<!-- /menu footer buttons -->
+					</div>
+				</div>
+
+
+				<!-- page content -->
+				<div class="right_col" role="main">
+					<div class="">
+						<div class="page-title">
+							<div class="title_left">
+								<h3></h3>
+							</div>
+
+
+						</div>
+						<div class="clearfix"></div>
+
+						<div class="row">
+
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2>QUESTIONNAIRE PROPOSITION TOUT RISQUE MAISON
+
+										</h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li>
+												<a class="collapse-link">
+													<i class="fa fa-chevron-up"></i>
+												</a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+													<i class="fa fa-wrench"></i>
+												</a>
+												<ul class="dropdown-menu" role="menu">
+													<li>
+														<a href="#">Settings 1</a>
+													</li>
+													<li>
+														<a href="#">Settings 2</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a class="close-link">
+													<i class="fa fa-close"></i>
+												</a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div
+										class="x_content">
+
+
+										<!-- Smart Wizard -->
+										<p>DECLARATION DU PROPOSANT</p>
+										<div id="wizard" class="form_wizard wizard_horizontal">
+											<ul class="wizard_steps">
+												<li>
+													<a href="#step-1">
+														<span class="step_no">1</span>
+														<span class="step_descr">
+															Etape 1<br/>
+															<small>Identification et Localisation</small>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#step-2">
+														<span class="step_no">2</span>
+														<span class="step_descr">
+															Etape 2<br/>
+															<small>Evaluation du bien</small>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#step-3">
+														<span class="step_no">3</span>
+														<span class="step_descr">
+															Etape 3<br/>
+															<small>Capitaux garantis</small>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#step-4">
+														<span class="step_no">4</span>
+														<span class="step_descr">
+															Etape 4<br/>
+															<small>Garanties souhaitées</small>
+														</span>
+													</a>
+												</li>
+											</ul>
+											<div id="step-1">
+												<table width="100%" border="1" cellspacing="1" cellpadding="1">
+													<tr>
+														<td>
+															<p>
+																La proposition n’engage ni le Proposant, ni l’Assureur. Seule la police ou la note de couverture constate leur engagement réciproque. Cependant, l’attention du Proposant est attirée sur l’importance des déclarations qui vont suivre.<br/>
+
+																Ces déclarations doivent en effet, permettre à l’Assureur d’apprécier les risques proposés. En cas d’acceptation, le questionnaire servira de base au contrat et en fera partie intégrante.</p>
+														</td>
+
+													</tr>
+												</table><br/>
+
+												<form class="form-horizontal form-label-left">
+
+													<div class="form-group row">
+														<label for="username" class="col-sm-2 col-form-label">Proposant</label>
+														<div class="col-sm-8">
+															<input type="text" class="form-control" id="username">
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="activity" class="col-sm-2 col-form-label">Adresse</label>
+														<div class="col-sm-8">
+															<input type="text" class="form-control" id="activity">
+														</div>
+													</div>
+
+													<div class="form-group row">
+														<label for="adresse" class="col-sm-2 col-form-label">E-mail</label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control" id="email">
+														</div>
+
+														<label for="tel" class="col-sm-1 col-form-label">Téléphone</label>
+														<div class="col-sm-3">
+															<input type="text" lenght="8" class="form-control" id="tel">
+														</div>
+
+													</div>
+
+													<div class="form-group row">
+														<label for="quality" class="col-sm-2 col-form-label">Qualité</label>
+														<div class="col-sm-8">
+															<div class="form-group">
+																<select class="form-control" id="quality">
+																	<option>Choisir ici</option>
+																	<option value="Propriétaire occupant">Propriétaire occupant</option>
+																	<option value="Propriétaire non occupant">Propriétaire non occupant</option>
+																	<option value="Locataire">Locataire</option>
+																	<option value="PNOLM">Propriétaire non occupant de Logement meublé</option>
+																	<option value="OLF">Occupant Logement de fonction</option>
+																</select>
+															</div>
+
+														</div>
+													</div><br/>
+
+
+													<table width="100%" border="1" cellspacing="1" cellpadding="1">
+														<tr>
+															<td>
+																<h2>SITUATION GEOGRAPHIQUE DU RISQUE</h2>
+															</td>
+														</tr>
+													</table><br/>
+
+													<div class="form-group row">
+														<label for="username" class="col-sm-2 col-form-label">N° lot et titre foncier :</label>
+														<div class="col-sm-6">
+															<input type="text" class="form-control" id="num_Lot_titre">
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="activity" class="col-sm-2 col-form-label">Ville, quartier :</label>
+														<div class="col-sm-6">
+															<input type="text" class="form-control" id="ville_Quartier">
+														</div>
+													</div>
+
+
+												</form>
+
+
+											</div>
+											<div id="step-2">
+												<h2 class="StepTitle">Evaluation du bien</h2>
+												<table width="100%" border="1" cellspacing="1" cellpadding="1">
+													<tr>
+														<td>
+															<h2>NATURE DU RISQUE</h2>
+														</td>
+													</tr>
+												</table><br/>
+
+												<div class="row">
+													<div class="col-sm-6">
+														<div class="form-check">
+
+															<label class="form-check-label" for="vb">
+																Villa basse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</label>
+															<input class="form-check-input" type="checkbox" value="Villa" id="vb">
+														</div>
+														<div class="form-check">
+
+															<label class="form-check-label" for="vr1">
+																Villa Duplex (R+1)&nbsp;
+															</label>
+															<input class="form-check-input" type="checkbox" value="VR1" id="vr1">
+														</div>
+														<div class="form-check">
+
+															<label class="form-check-label" for="vr2">
+																Villa Triplex&nbsp;   (R+2)
+															</label>
+															<input class="form-check-input" type="checkbox" value="VR2" id="vr2">
+														</div>
+														<div class="form-check">
+
+															<label class="form-check-label" for="appart">
+																Appartement&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</label>
+															<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+														</div>
+
+													</div>
+													<div class="col-sm-6">
+														<div class="form-group row">
+															<label for="nbDependances" class="col-sm-6 form-check-label">Nombre de dépendances :</label>
+															<div class="col-sm-2">
+																<input type="text" class="form-control" id="nbDependances">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="nbPieces" class="col-sm-6 col-form-label">Nombre de pièces :</label>
+															<div class="col-sm-2">
+																<input type="text" class="form-control" id="nbPieces">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="nbEtages" class="col-sm-6 col-form-label">Nombre d'étages :</label>
+															<div class="col-sm-2">
+																<input type="text" class="form-control" id="nbEtages"/>
+															</div>
+														</div>
+
+
+													</div>
+
+												</div>
+
+												<p>
+													<b>
+														Nature des portes :
+													</b>
+													Bois Plein
+													<input type="checkbox" class="flat" name="gender" id="bois" value="PBois"/>
+													Métaliques
+													<input type="checkbox" class="flat" name="gender" id="metal" value="PMetal"/>
+													Vitres
+													<input type="checkbox" class="flat" name="gender" id="vitre" value="pVitre"/>
+												</p>
+
+												<p>
+													<b>
+														Nature des fenêtres :
+													</b>
+													Bois Plein
+													<input type="checkbox" class="flat" name="gender" id="fbois" value="fBois"/>
+													Métaliques
+													<input type="checkbox" class="flat" name="gender" id="fmetal" value="fMetal"/>
+													Vitres
+													<input type="checkbox" class="flat" name="gender" id="fvitre" value="fVitre"/>
+												</p>
+
+												<div class="form-group row">
+													<label class="col-sm-6 col-form-label">
+														<input type="checkbox" class="js-switch"/>
+														Existance d'une piscine
+													</label>
+
+
+													<label for="superficie" class="col-sm-2 col-form-label">Superficie :</label>
+													<div class="col-sm-2">
+														<input type="text" class="form-control" id="superficie">
+													</div>
+												</div>
+
+											</div>
+											<div id="step-3">
+												<h2 class="StepTitle">Couverture</h2>
+
+												<table width="100%" border="1" cellspacing="1" cellpadding="1">
+													<tr>
+														<td>
+															<h2>NATURE DE LA CONSTRUCTION ET DE LA COUVERTURE</h2>
+
+														</td>
+													</tr>
+												</table><br/>
+
+												<div class="col-sm-12">
+													<div class="form-check">
+
+														<label class="form-check-label" for="dur">
+															DUR (dalles –béton –parpaings –pierre –briques)
+
+														</label>
+														<input class="form-check-input" type="checkbox" value="dur" id="dur">
+													</div>
+													<div class="form-check">
+
+														<label class="form-check-label" for="toles">
+															Tôles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+														</label>
+														<input class="form-check-input" type="checkbox" value="toles" id="toles">
+													</div>
+													<div class="form-check">
+
+														<label class="form-check-label" for="tv">
+															Tuiles,Vertuiles &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+														</label>
+														<input class="form-check-input" type="checkbox" value="TV" id="tv">
+													</div>
+													<div class="form-check">
+
+														<label class="form-check-label" for="bois">
+															Bois&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+														</label>
+														<input class="form-check-input" type="checkbox" value="cbois" id="cbois">
+													</div>
+													<div class="form-group row">
+														<label for="nbEtages" class="col-sm-1 col-form-label">Autres :</label>
+														<div class="col-sm-3">
+															<input type="text" class="form-control" id="autres"/>
+														</div>
+													</div>
+												</div>
+
+												<table width="100%" border="1" cellspacing="1" cellpadding="1">
+													<tr>
+														<td>
+															<h2>NATURE DE LA CONSTRUCTION ET DE LA COUVERTURE</h2>
+
+														</td>
+													</tr>
+												</table><br/>
+
+
+												CAPITAUX GARANTIS
+																																																																											
+																																																																											
+																																																																											VALEUR DU BÂTIMENT   :………………………………………………..FCFA
+																																																																											
+																																																																											VALEUR LOCATIVE          : ………………………………………………..FCFA
+																																																																											
+																																																																											VALEUR MATERIELS MOBILIERS   : ………………………………………….....FCFA
+																																																																											
+																																																																											OBJETS ET EFFETS PERSONNELS    : ………………………………………….FCFA
+																																																																											
+																																																																											BIJOUX ET OBJET DE VALEUR :   ……………………………………………FCFA (Garantie limitée à 30 % du contenu dont  15% sur un seul objet)
+																																																																											 
+																																																																											EXTENSIONS DE GARANTIE (MOYENNANT SURPRIME)    OUI    		NON  
+																																																																											                                                                                                        
+																																																																											 
+																																																																											DOMMAGES  ELECTRIQUES  étendus aux appareils de conditionnement d’air (Climatiseur, Split )
+																																																																											
+																																																																											CLIMATISATION  
+																																																																											
+																																																																											OUI                                                                                                          NON  
+																																																																											
+																																																																											ORDINATEUR  
+																																																																											
+																																																																											OUI                                                                                                          NON  
+																																																																											
+																																																																											Description du matériel   : 
+																																																																											
+																																																																											    1) Nature :……………………..Année d’acquisition ……………Marque……………………
+																																																																											Valeur unitaire : ………………………Nombre total :……………………………………..
+																																																																											
+																																																																											
+																																																																											    2) Nature :……………………..Année d’acquisition ……………Marque……………………
+																																																																											Valeur unitaire : ………………………Nombre total :……………………………………..
+																																																																											
+																																																																											    3) Nature :……………………..Année d’acquisition ……………Marque……………………
+																																																																											Valeur unitaire : ………………………Nombre total :……………………………………..
+																																																																											
+																																																																											    4) Nature :……………………..Année d’acquisition ……………Marque……………………
+																																																																											Valeur unitaire : ………………………Nombre total :……………………………………..
+																																																																											
+																																																																											
+																																																																											BRIS DE MACHINE : 
+																																																																											    • Marque :………………………………..	Année d’acquisition : …………………………
+																																																																											Valeur :………………………………….    Puissance :……………………………………...
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											                          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+											</p>
+
+										</div>
+										<div id="step-4">
+											<h2 class="StepTitle">Garanties souhaitées</h2>
+											<div class="col-sm-12">
+												<div class="form-check">
+
+													<label class="form-check-label" for="vb">
+														Incendie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+													</label>
+													<input class="form-check-input" type="checkbox" value="Villa" id="vb">
+												</div>
+												<div class="form-check">
+
+													<label class="form-check-label" for="vr1">
+														Dommages électriques&nbsp;
+													</label>
+													<input class="form-check-input" type="checkbox" value="VR1" id="vr1">
+												</div>
+												<div class="form-check">
+
+													<label class="form-check-label" for="vr2">
+														Tempêtes ouragans cyclones
+													</label>
+													<input class="form-check-input" type="checkbox" value="VR2" id="vr2">
+												</div>
+												<div class="form-check">
+
+													<label class="form-check-label" for="appart">
+														Dégats des eaux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													</label>
+													<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+												</div>
+												<div class="form-check">
+
+													<label class="form-check-label" for="appart">
+														Vol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													</label>
+													<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+												</div>
+												<div class="form-check">
+
+													<label class="form-check-label" for="appart">
+														RC Chef de famille&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													</label>
+													<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+												</div>
+												<div class="form-check">
+
+													<label class="form-check-label" for="appart">
+														RC Propriétaire d'immeuble&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													</label>
+													<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+												</div>
+												<div class="form-check">
+
+													<label class="form-check-label" for="appart">
+														Séjour voyage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													</label>
+													<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+												</div>
+												<div class="form-check">
+
+													<label class="form-check-label" for="appart">
+														Denrées en congelateur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													</label>
+													<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+												</div>
+												<div class="form-check">
+
+													<label class="form-check-label" for="appart">
+														Tous risques informatiques&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													</label>
+													<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+												</div>
+												<div class="form-check">
+
+													<label class="form-check-label" for="appart">
+														GEMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													</label>
+													<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+												</div>
+												<div class="form-check">
+
+													<label class="form-check-label" for="appart">
+														Bris de machine&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													</label>
+													<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+												</div>
+												<br/>
+												<p>NB : Les réponses du présent questionnaire seront réputées faire partie intégrante du contrat dans son établissement. En conséquence, toute réticences, toute omission, toute réponse ou déclaration inexacte du proposant peut entrainer l’application des sanctions prévues aux articles 18 et 19 du Code CIMA.</p>
+
+
+											</div>
+										</div>
+
+									</div>
+									<!-- End SmartWizard Content -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /page content -->
+
+
+			<!-- footer content -->
+			<footer>
+				<div class="pull-right">
+					Gentelella - Bootstrap Admin Template by
+					<a href="https://colorlib.com">Colorlib</a>
+				</div>
+				<div class="clearfix"></div>
+			</footer>
+			<!-- /footer content -->
+
+			<!-- jQuery -->
+			<script src="{{ asset('plugins/jquery_stepper/dist/jquery.min.js')}}"></script><!-- Bootstrap --><script src="{{ asset('plugins/bootstrap_stepper/dist/js/bootstrap.min.js')}}"></script><!-- FastClick --><script src="{{ asset('plugins/fastclick/lib/fastclick.js')}}"></script><!-- NProgress --><script src="{{ asset('plugins/nprogress/nprogress.js')}}"></script><!-- jQuery Smart Wizard --><script src="{{ asset('plugins/jQuery-Smart-Wizard/js/jquery.smartWizard.js')}}"></script><!-- Custom Theme Scripts --><script src="{{ asset('build/js/custom.min.js')}}"></script>
+			<script src="{{ asset('plugins/switchery/dist/switchery.min.js')}}"></script>
+		</body>
+	</body>
+</html></body></html>

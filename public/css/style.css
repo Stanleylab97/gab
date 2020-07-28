@@ -2155,8 +2155,8 @@ ul.arrow li:before {
   background: #191919;
   height: 50px;
   top: -25px;
-  -webkit-transform: skew(0deg, -2deg);
-  transform: skew(0deg, -2deg);
+  -webkit-transform: skew(0deg, 0deg);
+  transform: skew(0deg, 0deg);
 }
 
 .footer-social {

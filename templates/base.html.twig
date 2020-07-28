@@ -35,9 +35,9 @@
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 		<!--[if lt IE 9]>
-		            <script src="{{ asset('plugins/html5shiv.js') }}"></script>
-		            <script src="{{ asset('plugins/respond.min.js') }}"></script>
-		            <![endif]-->
+																														            <script src="{{ asset('plugins/html5shiv.js') }}"></script>
+																														            <script src="{{ asset('plugins/respond.min.js') }}"></script>
+																														            <![endif]-->
 
 		<!-- Main Stylesheet -->
 		<link
@@ -45,82 +45,78 @@
 		<link rel="icon" href="img/favicon/favicon-32x32.png" type="image/x-icon"/>
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144x144.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-72x72.png">
-		<link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.png">
+		<link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.png"> {% block styleheader %}{% endblock %}
+		</head>
+		<body>
 
-		{% block styleheader %}{% endblock %}
-	</head>
-	<body>
+			<div
+				class="body-inner">
 
-		<div
-			class="body-inner">
+				<!-- Header start -->
+				{% block header %}
+					<header id="header" class="fixed-top header2" role="banner">
+						<div class="container">
+							<nav class="navbar navbar-expand-lg navbar-dark">
+								<a class="navbar-brand" href="index.html"><img class="img-fluid" src="{{ asset('images/logo.png') }}" alt="logo"></a>
+								<button class="navbar-toggler ml-auto border-0 rounded-0 text-white" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="fa fa-bars"></span>
+								</button>
 
-			<!-- Header start -->
-			{% block header %}
-				<header id="header" class="fixed-top header2" role="banner">
-					<div class="container">
-						<nav class="navbar navbar-expand-lg navbar-dark">
-							<a class="navbar-brand" href="index.html"><img class="img-fluid" src="{{ asset('images/logo.png') }}" alt="logo"></a>
-							<button class="navbar-toggler ml-auto border-0 rounded-0 text-white" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="fa fa-bars"></span>
-							</button>
+								<div class="collapse navbar-collapse text-center" id="navigation">
+									<ul class="navbar-nav ml-auto">
 
-							<div class="collapse navbar-collapse text-center" id="navigation">
-								<ul class="navbar-nav ml-auto">
+										<li class="nav-item active">
+											<a class="nav-link" href="{{path('accueil')}}">Accueil</a>
+										</li>
+									</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										A Propos
+									</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="{{path('historique')}}">Historique</a>
+										<a class="dropdown-item" href="{{path('organisation')}}">Organisation</a>
+										<a class="dropdown-item" href="{{path('testimonials')}}">Avis de nos clients</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Nos produits
+									</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="{{path('part_pro')}}">Particuliers</a>
+										<a class="dropdown-item" href="{{path('org_pro')}}">Entreprises</a>
+									</div>
 
-									<li class="nav-item active">
-										<a class="nav-link" href="{{path('accueil')}}">Accueil</a>
-									</li>
-								</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									A Propos
-								</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="{{path('historique')}}">Historique</a>
-									<a class="dropdown-item" href="{{path('organisation')}}">Organisation</a>
-									<a class="dropdown-item" href="{{path('testimonials')}}">Avis de nos clients</a>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="{{path('products')}}">Nos produits</a>
-							</li>
-						</a>
-					</li>
-					
-				</a>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Carrières
-				</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="{{path('offres')}}">Offres</a>
-					<a class="dropdown-item" href="{{path('stageac')}}">Demande de stage</a>
-					<a class="dropdown-item" href="{{path('emploi')}}">Demande d'emploi</a>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="{{path('reseau')}}">Notre réseau</a>
-			</li>
-		</body>
-	</html>
-</a></li><li class="nav-item">
-<a class="nav-link" href="{{path('contact')}}">Contact</a></li></a></li></ul></div></nav></div></header>{% endblock %}<!--/ Header end -->
-
-{% block content %}
-  Mon contenu
-{% endblock %}
-
-{% block footer %}
-<section id="copyright" class="copyright angle"><div class="container"><div class="row"><div class="col-md-12 text-center"><ul class="footer-social unstyled"><li><a title="Twitter" href="#"><span class="icon-pentagon wow bounceIn">
-<i class="fa fa-twitter"></i></span></a><a title="Facebook" href="#"><span class="icon-pentagon wow bounceIn">
-<i class="fa fa-facebook"></i></span></a><a title="Google+" href="#"><span class="icon-pentagon wow bounceIn">
-<i class="fa fa-google-plus"></i></span></a></li></ul></div></div><!--/ Row end --><div class="row"><div class="col-md-12 text-center"><div class="copyright-info">&copy; Copyright 2020 StanleyLab.<span>Designed by<a href="https://themefisher.com">Themefisher.com</a></span></div></div></div><!--/ Row end --><div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix position-fixed"><button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i></button></div></div><!--/ Container end --></section>
-{% endblock %}
-
-{% block javascripts %}
-
-{% endblock %} 
-</body>
-</html>
+								</li>
+						
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Carrières
+									</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="{{path('offres')}}">Offres</a>
+										<a class="dropdown-item" href="{{path('stageac')}}">Demande de stage</a>
+										<a class="dropdown-item" href="{{path('emploi')}}">Demande d'emploi</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{{path('reseau')}}">Notre réseau</a>
+								</li>
+			</body>
+		</html>
+	</a>
+</li>
+<li class="nav-item">
+	<a class="nav-link" href="{{path('contact')}}">Contact</a>
+</li></a></li></ul></div></nav></div></header>{% endblock %}<!--/ Header end -->{% block content %}Mon contenu{% endblock %}{% block footer %}<section id="copyright" class="copyright angle"><div class="container"><div class="row"><div class="col-md-12 text-center"><ul class="footer-social unstyled"><li><a title="Twitter" href="#">
+<span class="icon-pentagon wow bounceIn">
+	<i class="fa fa-twitter"></i>
+</span></a><a title="Facebook" href="#">
+<span class="icon-pentagon wow bounceIn">
+	<i class="fa fa-facebook"></i>
+</span></a><a title="Google+" href="#">
+<span class="icon-pentagon wow bounceIn">
+	<i class="fa fa-google-plus"></i>
+</span></a></li></ul></div></div><!--/ Row end --><div class="row"><div class="col-md-12 text-center"><div class="copyright-info">&copy; Copyright 2020 StanleyLab.<span>Designed by<a href="https://themefisher.com">Themefisher.com</a></span></div></div></div><!--/ Row end --><div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix position-fixed"><button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i></button></div></div><!--/ Container end --></section>{% endblock %}{% block javascripts %}{% endblock %}</body> </html>

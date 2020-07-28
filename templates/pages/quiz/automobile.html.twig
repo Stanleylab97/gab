@@ -1,0 +1,300 @@
+{% extends 'base.html.twig' %}
+
+{% block styleheader %}
+	<link rel="stylesheet" href="{{ asset('plugins/nprogress/nprogress.css') }}">
+	<style type="text/css">
+		table {
+			margin: 18px 0;
+			width: 100%;
+			border-collapse: collapse;
+		}
+		table th,
+		table td {
+			text-align: left;
+			padding: 6px;
+		}
+		table,
+		th,
+		td {
+			border: 1px solid #000;
+		}
+	</style>
+
+
+{% endblock %}
+
+{% block content %}
+	<div id="banner-area">
+		<img src="images/banner/banner1.jpg" alt=""/>
+		<div class="parallax-overlay"></div>
+		<!-- Subpage title start -->
+		<div class="banner-title-content">
+			<div class="text-center">
+				<h2>Demander un devis Automobile</h2>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb justify-content-center">
+						<li class="breadcrumb-item">
+							<a href="/">Accueil</a>
+						</li>
+						<li class="breadcrumb-item text-white" aria-current="devis">Devis</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<!-- Subpage title end -->
+	</div>
+	<!-- Banner area end -->
+	<br>
+
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center"><img src="images/logomap.png" style="width: auto; height: auto;max-width: 120px;max-height: 120px" class="rounded" alt="xxx"></div>
+		<div class="col-md-4"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center">
+			<h4>QUESTIONNAIRE AUTOMOBILE</h4>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-2"></div>
+
+		<div class="col-md-8">
+			<p>Les rubriques précédées d'un (*) doivent impérativement être renseignées.</p>
+			<table width="100%" border="1" cellspacing="1" cellpadding="1">
+				<tr>
+					<td>
+						<h5>IDENTIFICATION DE L'ASSURE</h5>
+					</td>
+
+				</tr>
+			</table>
+			<br/>
+			<form>
+				<div class="form-group row">
+					<label for="username" class="col-sm-4 col-form-label">Nom et Prénoms</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="username">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="activity" class="col-sm-4 col-form-label">Activité</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="activity">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="category" class="col-sm-4 col-form-label">Catégorie socio-professionnelle</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="category">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="adresse" class="col-sm-4 col-form-label">Adresse</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control" id="category">
+					</div>
+
+					<label for="tel" class="col-sm-2 col-form-label">Téléphone</label>
+					<div class="col-sm-3">
+						<input type="text" lenght="8" class="form-control" id="tel">
+					</div>
+
+				</div><br/>
+
+				<table width="100%" border="1" cellspacing="1" cellpadding="1">
+					<tr>
+						<td>
+							<h5>MONO VEHICULE</h5>
+						</td>
+
+					</tr>
+				</table>
+				<br/>
+				<h5>CARACTERISTIQUES DU VEHICULE</h5>
+
+				<div class="form-group row">
+					<label for="adresse" class="col-sm-2 col-form-label">Marque</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control" id="category">
+					</div>
+
+					<label for="tel" class="col-sm-1 col-form-label">Modèle</label>
+					<div class="col-sm-2">
+						<input type="text" lenght="8" class="form-control" id="tel">
+					</div>
+					<label for="tel" class="col-sm-2 col-form-label">Puissance(CV)</label>
+					<div class="col-sm-2">
+						<input type="text" lenght="8" class="form-control" id="tel" placeholder="10">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="energie" class="col-sm-2 col-form-label">Energie</label>
+					<div class="col-sm-2">
+						<input type="text" class="form-control" id="energie">
+
+					</div>
+
+					<label for="annee" class="col-sm-4 col-form-label">Première Année mise en circulation</label>
+
+					<div class="col-sm-4">
+						<input type="number" lenght="8" class="form-control" id="annee">
+					</div>
+
+				</div>
+
+				<div class="form-group row">
+					<label for="valeurNeuve" class="col-sm-2 col-form-label">Valeur à neuf</label>
+
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="valeurNeuve">
+
+					</div>
+
+					<label for="valeurVenale" class="col-sm-2 col-form-label">Valeur vénale</label>
+					<div class="col-sm-4">
+						<input type="number" lenght="8" class="form-control" id="valeurVenale">
+
+					</div>
+
+				</div>
+
+				<div class="form-group row">
+					<label for="usage" class="col-sm-2 col-form-label">Usage</label>
+
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="usage">
+
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="usage" class="col-sm-3 col-form-label">Zones de circulation</label>
+
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id="zone">
+					</div>
+				</div><br/>
+
+				<h5>GARANTIES SOUHAITEES:</h5>
+				<table>
+					<tr>
+						<th>Titre du film</th>
+						<td>Massacre à la tronçonneuse</td>
+						<td>Les bisounours font du ski</td>
+						<td>Lucky Luke, seul contre tous</td>
+					</tr>
+					<tr>
+						<th>Pour enfants ?</th>
+						<td>Non, trop violent</td>
+						<td>Oui, adapté</td>
+						<td rowspan="2">Pour toute la famille !</td>
+					</tr>
+					<tr>
+						<th>Pour adolescents ?</th>
+						<td>Oui</td>
+						<td>Pas assez violent...</td>
+					</tr>
+				</table>
+
+				<div class="table-responsive-md">
+
+					<table class="table table-bordered" id="vehicules">
+
+						<tr>
+							<th rowspan="2">Nom</th>
+							<th rowspan="2">ID</th>
+							<th colspan="2">Dates</th>
+							<th rowspan="2">Solde</th>
+						</tr>
+						<tr>
+							<th>Inscription</th>
+							<th>Résiliation</th>
+						</tr>
+						
+						<tr></tr>
+
+					</table>
+				</div><br/><br/>
+
+				<table width="100%" border="1" cellspacing="1" cellpadding="1">
+					<tr>
+						<td>
+							<h5>FLOTTE</h5>
+						</td>
+					</tr>
+				</table><br/>
+				<p>Pour les flottes, il faut demander l’état du parc comprenant les caractéristiques des véhicules à assurer, l’usage et les garanties souhaitées pour chaque véhicule.</p>
+				<p>Sinistralité des 36 derniers mois :</p>
+
+				<div class="form-group row">
+					<label for="nbSinistres" class="col-sm-3 col-form-label">Nombre de sinistres :</label>
+
+					<div class="col-sm-2">
+						<input type="text" class="form-control" id="nbSinistres">
+					</div>
+
+					<label for="conseq" class="col-sm-3 col-form-label">Conséquences</label>
+
+
+					<div class="col-sm-4">
+						<input type="number" lenght="8" class="form-control" id="conseq">
+					</div>
+
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4"><br/><button type="submit" class="btn btn-warning">Envoyer la demande</button>
+					</div>
+					<div class="col-md-4"></div>
+				</div><br/><br/></form>
+		</div>
+	</div>
+	<div class="col-md-2"></div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6"><br/><b>NB : Les réponses du présent questionnaire seront réputées faire partie intégrante du contrat dans son établissement. En conséquence, toute réticences, toute omission, toute réponse ou déclaration inexacte du proposant peut entrainer l’application des sanctions prévues aux articles 18 et 19 du Code CIMA.</b>
+		</div>
+		<div class="col-md-3"></div>
+	</div><br/><br/></div></div>{% endblock %}{% block javascripts %}<!-- jQuery --><script src="plugins/jQuery/jquery.min.js"></script><!-- Bootstrap JS --><script src="plugins/bootstrap/bootstrap.min.js"></script><!-- Style Switcher --><script type="text/javascript" src="plugins/style-switcher.js"></script><!-- Owl Carousel --><script type="text/javascript" src="plugins/owl/owl.carousel.js"></script><!-- PrettyPhoto --><script type="text/javascript" src="plugins/jquery.prettyPhoto.js"></script><!-- Bxslider --><script type="text/javascript" src="plugins/flex-slider/jquery.flexslider.js"></script><!-- CD Hero slider --><script type="text/javascript" src="plugins/cd-hero/cd-hero.js"></script><!-- Isotope --><script type="text/javascript" src="plugins/isotope.js"></script><script type="text/javascript" src="plugins/ini.isotope.js"></script><!-- Wow Animation --><script type="text/javascript" src="plugins/wow.min.js"></script><!-- Eeasing --><script type="text/javascript" src="plugins/jquery.easing.1.3.js"></script><!-- Counter --><script type="text/javascript" src="plugins/jquery.counterup.min.js"></script><!-- Waypoints --><script type="text/javascript" src="plugins/waypoints.min.js"></script><!-- Nbco --><script type="text/javascript" src="plugins/nprogress/nprogress.js"></script><!-- Main Script --><script src="js/script.js"></script><script type="text/javascript">
+$(document).ready(function () {
+$("#detailContrat").hide();
+$("#detailAssureur").hide();
+});
+
+$('input:radio[name="typeAffaire"]').change(function () {
+if ($(this).is(':checked') && $(this).val() == 'avenant') { // append goes here
+$("#detailContrat").show("fast");
+} else {
+$("#detailContrat").hide();
+}
+});
+
+
+$('input:radio[name="quizriskcouvert"]').change(function () {
+if ($(this).is(':checked') && $(this).val() == '1') { // append goes here
+$("#detailAssureur").show("fast");
+} else {
+$("#detailAssureur").hide();
+}
+});
+$("#add-row").click(function () {
+var ligne = "<tr><td><input type='checkbox' name='select'></td><td><input type='text'/></td><td><input type='text'/></td><td><input type='text'/></td><td><input type='text'/></td><td><input type='text'/></td> </tr>";
+$("#vehicules tbody").append(ligne);
+
+$("#delete-row").click(function () {
+
+$("#vehicules tbody").find('input[name="select"]').each(function () {
+if ($(this).is(":checked")) {
+$(this).parents("tr").remove();
+}
+
+});
+});
+});</script>{% endblock %}

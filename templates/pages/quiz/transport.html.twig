@@ -1,0 +1,169 @@
+{% extends 'base.html.twig' %}
+
+{% block styleheader %}
+	<link rel="stylesheet" href="{{ asset('plugins/nprogress/nprogress.css') }}">
+
+{% endblock %}
+
+{% block content %}
+	<div id="banner-area">
+		<img src="images/banner/banner1.jpg" alt=""/>
+		<div class="parallax-overlay"></div>
+		<!-- Subpage title start -->
+		<div class="banner-title-content">
+			<div class="text-center">
+				<h2>Demander un devis TRANSPORT</h2>
+
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb justify-content-center">
+						<li class="breadcrumb-item">
+							<a href="/">Accueil</a>
+						</li>
+						<li class="breadcrumb-item text-white" aria-current="devis">Devis</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<!-- Subpage title end -->
+	</div>
+	<!-- Banner area end -->
+	<br>
+
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center"><img src="images/logomap.png" style="width: auto; height: auto;max-width: 120px;max-height: 120px" class="rounded" alt="xxx"></div>
+		<div class="col-md-4"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center">
+			<h4>QUESTIONNAIRE TRANSPORT</h4>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4"><br/>
+			<h5>A- IDENTIFICATION DE L'ASSURE</h5>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<div class="col-md-1"></div>
+		<div class="col-md-11">
+			<form>
+				<div class="form-group row">
+					<label for="username" class="col-sm-3 col-form-label">Nom et Prénoms</label>
+					<div class="col-sm-7">
+						<input type="text" class="form-control" id="username">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="activity" class="col-sm-3 col-form-label">Activité</label>
+					<div class="col-sm-7">
+						<input type="text" class="form-control" id="activity">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="category" class="col-sm-3 col-form-label">Catégorie socio-professionnelle</label>
+					<div class="col-sm-7">
+						<input type="text" class="form-control" id="category">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="adresse" class="col-sm-3 col-form-label">Adresse</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control" id="category">
+					</div>
+
+					<label for="tel" class="col-sm-1 col-form-label">Téléphone</label>
+					<div class="col-sm-3">
+						<input type="text" lenght="8" class="form-control" id="tel">
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3"><br/>
+				<h5>B- Nature de la marchandise</h5>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group row">
+
+					<input type="text" class="form-control" id="naturemarchandise">
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3"><br/>
+				<h5>C- Poids de la marchandise</h5>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group row">
+
+					<input type="text" class="form-control" id="poids">
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3"><br/>
+				<h5>D- Nombre de camions</h5>
+			</div>
+			<div class="col-md-1">
+				<div class="form-group row">
+
+					<input type="number" class="form-control" id="nbCamions">
+				</div>
+
+			</div>
+
+			<div class="col-md-3"><br/>
+				<h5>E- Capacité des camions</h5>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group row">
+
+					<input type="number" class="form-control" id="capacite">
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<div class="row">
+
+			<div class="col-md-4"></div>
+			<div class="col-md-4"><br/>
+
+				<button type="submit" class="btn btn-warning">Envoyer la demande</button>
+			</div>
+			<div class="col-md-4"></div>
+
+		</div><br/><br/>
+
+		<div class="row">
+
+			<div class="col-md-3"></div>
+			<div class="col-md-6"><br/>
+				<b>NB : Les réponses du présent questionnaire seront réputées faire partie intégrante du contrat dans son établissement. En conséquence, toute réticences, toute omission, toute réponse ou déclaration inexacte du proposant peut entrainer l’application des sanctions prévues aux articles 18 et 19 du Code CIMA.</b>
+			</div>
+			<div class="col-md-3"></div>
+
+		</div><br/><br/>
+
+
+	</form>
+
+{% endblock %}
+{% block javascripts %}<!-- jQuery --><script src="plugins/jQuery/jquery.min.js"></script><!-- Bootstrap JS --><script src="plugins/bootstrap/bootstrap.min.js"></script><!-- Style Switcher --><script type="text/javascript" src="plugins/style-switcher.js"></script><!-- Owl Carousel --><script type="text/javascript" src="plugins/owl/owl.carousel.js"></script><!-- PrettyPhoto --><script type="text/javascript" src="plugins/jquery.prettyPhoto.js"></script><!-- Bxslider --><script type="text/javascript" src="plugins/flex-slider/jquery.flexslider.js"></script><!-- CD Hero slider --><script type="text/javascript" src="plugins/cd-hero/cd-hero.js"></script><!-- Isotope --><script type="text/javascript" src="plugins/isotope.js"></script>
+	<script type="text/javascript" src="plugins/ini.isotope.js"></script><!-- Wow Animation --><script type="text/javascript" src="plugins/wow.min.js"></script><!-- Eeasing --><script type="text/javascript" src="plugins/jquery.easing.1.3.js"></script><!-- Counter --><script type="text/javascript" src="plugins/jquery.counterup.min.js"></script><!-- Waypoints --><script type="text/javascript" src="plugins/waypoints.min.js"></script><!-- Nbco --><script type="text/javascript" src="plugins/nprogress/nprogress.js"></script><!-- Main Script --><script src="js/script.js"></script>
+{% endblock %}

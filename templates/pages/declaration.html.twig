@@ -1,0 +1,161 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+	<div id="banner-area">
+		<img src="images/banner/banner1.jpg" alt=""/>
+		<div class="parallax-overlay"></div>
+		<!-- Subpage title start -->
+		<div class="banner-title-content">
+			<div class="text-center">
+				<h2>Enregistrez votre déclaration en un clic
+				</h2>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb justify-content-center">
+						<li class="breadcrumb-item">
+							<a href="/">Accueil</a>
+						</li>
+						<li class="breadcrumb-item text-white" aria-current="page">Declaration</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<!-- Subpage title end -->
+	</div>
+	<!-- Banner area end -->
+
+	<!-- Main container start -->
+	<section id="main-container">
+		<div class="container">
+			<section id="image-block" class="image-block p-0">
+				<div class="card">
+					<div class="card-header">
+						<h3>Déclarer un sinistre</h3>
+					</div>
+
+
+					<div class="card-body">
+						<div class="col-sm-3"></div>
+						<div class="col-sm-6" id="declaration">
+							<form method="POST">
+								<input type="hidden" name="_token" value="{{csrf_token('declaration_create')}}"/>
+
+								*Civilité:
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="civility" id="inlineRadio1" value="Monsieur">
+									<label class="form-check-label" for="inlineRadio1">Monsieur</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="civility" id="inlineRadio2" value="Madame">
+									<label class="form-check-label" for="inlineRadio2">Madame</label>
+								</div>
+
+
+								<div class="form-group row">
+									<label for="colFormLabel" class="col-sm-4 col-form-label">* Nom</label>
+									<div class="col-sm-8">
+
+										<input type="text" class="form-control form-control-sm" name="nom" id="nom" placeholder="COSSI">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="prenoms" class="col-sm-4 col-form-label">* Prénoms</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control form-control-sm" name="prenoms" id="prenoms" placeholder="Paul">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="numClient" class="col-sm-4 col-form-label">Numero Client</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control form-control-sm" name="numClient" id="numClient" placeholder="AC586">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="numContrat" class="col-sm-4 col-form-label">Numéro Contrat</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control form-control-sm" name="numContrat" id="numContrat" placeholder="2019A52798">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="tel" class="col-sm-4 col-form-label">Téléphone</label>
+									<div class="col-sm-8">
+										<input type="tel" class="form-control form-control-sm" id="tel" name="tel" placeholder="+229XXXXXXXX"/>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="email" class="col-sm-4 col-form-label">Email</label>
+									<div class="col-sm-8">
+										<input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="votreadresse@xxx.com">
+									</div>
+								</div>
+
+
+								<div class="form-row">
+									<div class="col-sm-6">
+										<label for="validationCustom01">Date de survenance</label>
+										<input type="date" class="form-control" id="dateS" name="dateSin" required>
+									</div>
+									<div class="col-sm-6">
+										<label for="validationCustom01">Heure</label>
+										<input type="time" class="form-control" id="dateS" name="heureSin" required>
+									</div>
+								</div><br/>
+
+
+								<div class="form-row">
+									<div class="col-sm-6">
+										<select class="custom-select custom-select-sm" name="agence">
+											<option selected>Bureau siège</option>
+											<option value="1">Agence Okassur</option>
+											<option value="2">Agence Sike</option>
+											<option value="3">Orval</option>
+										</select>
+									</div>
+									<div class="col-sm-6">
+										<select class="custom-select custom-select-sm" name="typeContrat">
+											<option selected>Type d'assurance</option>
+											<option value="Automobile">Automobile</option>
+											<option value="Multirisque professionnelle">Multirisque professionnelle</option>
+											<option value="Transport">Transport</option>
+										</select>
+									</div>
+
+								</div><br/>
+								Y a t-il des blessés?:
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="chocked" id="inlineRadio1" value="Oui">
+									<label class="form-check-label" for="inlineRadio1">Oui</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="chocked" id="inlineRadio2" value="Non">
+									<label class="form-check-label" for="inlineRadio2">Non</label>
+								</div><br/>
+
+								<div class="form-row">
+									<textarea class="form-control" name="circonstances" rows="5" cols="150" id="validationTextarea" placeholder="* Circonstances du sinistre" required></textarea>
+								</div><br/>
+								<div class="form-row">
+
+									<textarea class="form-control" name="dommages" rows="5" cols="150" id="validationTextarea" placeholder="* Dommages" required></textarea>
+
+
+								</div><br/>
+
+								<input type="file" name="lien" class="btn btn-info btn-lg btn-block">Ajouter une image</button>
+								<button type="submit" class="btn btn-success btn-lg btn-block">Envoyer la déclaration</button>
+							</form>
+
+						</div>
+
+						<div class="col-sm-3"></div>
+
+
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+	</div>
+</div>
+<!--/ container end --></section><!--/ Main container end -->{% endblock %}{% block javascripts %}<!-- jQuery --><script src="plugins/jQuery/jquery.min.js"></script><!-- Bootstrap JS --><script src="plugins/bootstrap/bootstrap.min.js"></script><!-- Style Switcher --><script type="text/javascript" src="plugins/style-switcher.js"></script><!-- Owl Carousel --><script type="text/javascript" src="plugins/owl/owl.carousel.js"></script><!-- PrettyPhoto --><script type="text/javascript" src="plugins/jquery.prettyPhoto.js"></script><!-- Bxslider --><script type="text/javascript" src="plugins/flex-slider/jquery.flexslider.js"></script><!-- CD Hero slider --><script type="text/javascript" src="plugins/cd-hero/cd-hero.js"></script><!-- Isotope --><script type="text/javascript" src="plugins/isotope.js"></script><script type="text/javascript" src="plugins/ini.isotope.js"></script><!-- Wow Animation --><script type="text/javascript" src="plugins/wow.min.js"></script><!-- Eeasing --><script type="text/javascript" src="plugins/jquery.easing.1.3.js"></script><!-- Counter --><script type="text/javascript" src="plugins/jquery.counterup.min.js"></script><!-- Waypoints --><script type="text/javascript" src="plugins/waypoints.min.js"></script><!-- Main Script --><script src="js/script.js"></script>{% endblock %}

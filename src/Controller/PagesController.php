@@ -17,6 +17,7 @@ class PagesController extends AbstractController
         ]);
     }
 
+
      /**
      * @Route("devis", name="devis")
      */
@@ -130,6 +131,26 @@ class PagesController extends AbstractController
         ]);
     }
 
+     /**
+     * @Route("/quiz_rc_sport", name="quiz_rc_sport")
+     */
+    public function quiz_rc_sport()
+    {
+        return $this->render('pages/quiz/rc_sport.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
+    /**
+     * @Route("/quiz_trc", name="quiz_trc")
+     */
+    public function quiz_trc()
+    {
+        return $this->render('pages/quiz/trc.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
         /**
      * @Route("/quiz_sante", name="quiz_sante")
      */
@@ -208,7 +229,7 @@ class PagesController extends AbstractController
      */
     public function test()
     {
-        return $this->render('test.html.twig', [
+        return $this->render('stepper.html.twig', [
             'controller_name' => 'PagesController',
         ]);
     }

@@ -1,103 +1,564 @@
-{% extends 'base.html.twig' %}
+{% extends 'stepper.html.twig' %}
 
-{% block styleheader %}{% endblock %}
+{% block titre "QUESTIONNAIRE PROPOSITION TOUT RISQUE MAISON" %}
 
-{% block content %}
-	<div id="banner-area">
-		<img src="images/banner/banner1.jpg" alt=""/>
-		<div class="parallax-overlay"></div>
-		<!-- Subpage title start -->
-		<div class="banner-title-content">
-			<div class="text-center">
-				<h2>Demander un devis Astrim</h2>
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb justify-content-center">
-						<li class="breadcrumb-item">
-							<a href="/">Accueil</a>
-						</li>
-						<li class="breadcrumb-item text-white" aria-current="devis">Devis</li>
-					</ol>
-				</nav>
+
+{% block step1 %}
+	
+
+	<form class="form-horizontal form-label-left">
+
+		<div class="form-group row">
+			<label for="username" class="col-sm-2 col-form-label">Proposant</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id="username">
 			</div>
 		</div>
-		<!-- Subpage title end -->
-	</div>
-	<!-- Banner area end -->
-	<br>
+		<div class="form-group row">
+			<label for="activity" class="col-sm-2 col-form-label">Adresse</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id="activity">
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label for="adresse" class="col-sm-2 col-form-label">E-mail</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="email">
+			</div>
+
+			<label for="tel" class="col-sm-1 col-form-label">Téléphone</label>
+			<div class="col-sm-3">
+				<input type="text" lenght="8" class="form-control" id="tel">
+			</div>
+
+		</div>
+
+		<div class="form-group row">
+			<label for="quality" class="col-sm-2 col-form-label">Qualité</label>
+			<div class="col-sm-8">
+				<div class="form-group">
+					<select class="form-control" id="quality">
+						<option>Choisir ici</option>
+						<option value="Propriétaire occupant">Propriétaire occupant</option>
+						<option value="Propriétaire non occupant">Propriétaire non occupant</option>
+						<option value="Locataire">Locataire</option>
+						<option value="PNOLM">Propriétaire non occupant de Logement meublé</option>
+						<option value="OLF">Occupant Logement de fonction</option>
+					</select>
+				</div>
+
+			</div>
+		</div><br/>
+
+
+		<table width="100%" border="1" cellspacing="1" cellpadding="1">
+			<tr>
+				<td>
+					<h2>SITUATION GEOGRAPHIQUE DU RISQUE</h2>
+				</td>
+			</tr>
+		</table><br/>
+
+		<div class="form-group row">
+			<label for="username" class="col-sm-2 col-form-label">N° lot et titre foncier :</label>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" id="num_Lot_titre">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="activity" class="col-sm-2 col-form-label">Ville, quartier :</label>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" id="ville_Quartier">
+			</div>
+		</div>
+
+
+	</form>
+
+
+{% endblock %}
+
+{% block step2 %}
+	<h2 class="StepTitle">Evaluation du bien</h2>
+	<table width="100%" border="1" cellspacing="1" cellpadding="1">
+		<tr>
+			<td>
+				<h2>NATURE DU RISQUE</h2>
+			</td>
+		</tr>
+	</table><br/>
 
 	<div class="row">
-		<div class="col-md-4"></div>
-		<div class="col-md-4 text-center"><img src="images/logomap.png" style="width: auto; height: auto;max-width: 120px;max-height: 120px" class="rounded" alt="xxx"></div>
-		<div class="col-md-4"></div>
+		<div class="col-sm-6">
+			<div class="form-check">
+
+				<label class="form-check-label" for="vb">
+					Villa basse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</label>
+				<input class="form-check-input" type="checkbox" value="Villa" id="vb">
+			</div>
+			<div class="form-check">
+
+				<label class="form-check-label" for="vr1">
+					Villa Duplex (R+1)&nbsp;
+				</label>
+				<input class="form-check-input" type="checkbox" value="VR1" id="vr1">
+			</div>
+			<div class="form-check">
+
+				<label class="form-check-label" for="vr2">
+					Villa Triplex&nbsp;   (R+2)
+				</label>
+				<input class="form-check-input" type="checkbox" value="VR2" id="vr2">
+			</div>
+			<div class="form-check">
+
+				<label class="form-check-label" for="appart">
+					Appartement&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</label>
+				<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+			</div>
+
+		</div>
+		<div class="col-sm-6">
+			<div class="form-group row">
+				<label for="nbDependances" class="col-sm-6 form-check-label">Nombre de dépendances :</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="nbDependances">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="nbPieces" class="col-sm-6 col-form-label">Nombre de pièces :</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="nbPieces">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="nbEtages" class="col-sm-6 col-form-label">Nombre d'étages :</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="nbEtages"/>
+				</div>
+			</div>
+
+
+		</div>
+
 	</div>
 
-	<div class="row">
-		<div class="col-md-4"></div>
-		<div class="col-md-4 text-center">
-			<h4>QUESTIONNAIRE ASSURANCE TOUT RISQUE MAISON</h4>
+	<p>
+		<b>
+			Nature des portes :
+		</b>
+		Bois Plein
+		<input type="checkbox" class="flat" name="gender" id="bois" value="PBois"/>
+		Métaliques
+		<input type="checkbox" class="flat" name="gender" id="metal" value="PMetal"/>
+		Vitres
+		<input type="checkbox" class="flat" name="gender" id="vitre" value="pVitre"/>
+	</p>
+
+	<p>
+		<b>
+			Nature des fenêtres :
+		</b>
+		Bois Plein
+		<input type="checkbox" class="flat" name="gender" id="fbois" value="fBois"/>
+		Métaliques
+		<input type="checkbox" class="flat" name="gender" id="fmetal" value="fMetal"/>
+		Vitres
+		<input type="checkbox" class="flat" name="gender" id="fvitre" value="fVitre"/>
+	</p>
+
+	<div class="form-group row">
+		<label class="col-sm-6 col-form-label">
+			<input type="checkbox" class="js-switch"/>
+			Existance d'une piscine
+		</label>
+
+
+		<label for="superficie" class="col-sm-2 col-form-label">Superficie :</label>
+		<div class="col-sm-2">
+			<input type="text" class="form-control" id="superficie">
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="col-md-2"></div>
+{% endblock %}
 
-		<div class="col-md-8">
-			<ul class="stepper horizontal" id="horizontal-stepper">
-				<li class="step active">
-					<div class="step-title waves-effect waves-dark">Step 1</div>
-					<div class="step-new-content">
-						<div class="row">
-							<div class="md-form col-12 ml-auto">
-								<input id="email-horizontal" type="email" class="validate form-control" required>
-								<label for="email-horizontal">Email</label>
-							</div>
-						</div>
-						<div class="step-actions">
-							<button class="waves-effect waves-dark btn btn-sm btn-primary next-step" data-feedback="someFunction21">CONTINUE</button>
-						</div>
-					</div>
-				</li>
-				<li class="step">
-					<div class="step-title waves-effect waves-dark">Step 2</div>
-					<div class="step-new-content">
-						<div class="row">
-							<div class="md-form col-12 ml-auto">
-								<input id="password-horizontal" type="password" class="validate form-control" required>
-								<label for="password-horizontal">Your password</label>
-							</div>
-						</div>
-						<div class="step-actions">
-							<button class="waves-effect waves-dark btn btn-sm btn-primary next-step" data-feedback="someFunction21">CONTINUE</button>
-							<button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step">BACK</button>
-						</div>
-					</div>
-				</li>
-				<li class="step">
-					<div class="step-title waves-effect waves-dark">Step 3</div>
-					<div class="step-new-content">
-						Finish!
-						<div class="step-actions">
-							<button class="waves-effect waves-dark btn-sm btn btn-primary m-0 mt-4" type="button">SUBMIT</button>
-						</div>
-					</div>
-				</li>
-			</ul>
+
+{% block step3 %}
+	<h2 class="StepTitle">Couverture</h2>
+
+	<table width="100%" border="1" cellspacing="1" cellpadding="1">
+		<tr>
+			<td>
+				<h2>NATURE DE LA CONSTRUCTION ET DE LA COUVERTURE</h2>
+
+			</td>
+		</tr>
+	</table><br/>
+
+	<div class="col-sm-12">
+		<div class="form-check">
+
+			<label class="form-check-label" for="dur">
+				DUR (dalles –béton –parpaings –pierre –briques)
+
+			</label>
+			<input class="form-check-input" type="checkbox" value="dur" id="dur">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="toles">
+				Tôles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="toles" id="toles">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="tv">
+				Tuiles,Vertuiles &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="TV" id="tv">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="bois">
+				Bois&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="cbois" id="cbois">
+		</div>
+		<div class="form-group row">
+			<label for="nbEtages" class="col-sm-1 col-form-label">Autres :</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="autres"/>
+			</div>
+		</div>
+	</div>
+
+	<table width="100%" border="1" cellspacing="1" cellpadding="1">
+		<tr>
+			<td>
+				<h2>CAPITAUX GARANTIS</h2>
+
+			</td>
+		</tr>
+	</table><br/>
+
+	<div class="form-group row">
+		<label for="valeurB" class="col-sm-3 col-form-label">Valeur du batiment (CFA):</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" id="valeurB">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="valeurL" class="col-sm-3 col-form-label">Valeur locative (CFA):</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" id="valeurL">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="valeurMaterielMobiliers" class="col-sm-3 col-form-label">Valeur matériels mobiliers (CFA):</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" id="valeurMaterielMobiliers">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="activity" class="col-sm-3 col-form-label">Objets et effets personnels (CFA):</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" id="ville_Quartier">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="activity" class="col-sm-3 col-form-label">Bijoux et objets de valeurs (CFA) :</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" id="bijoux">(Garantie limitée à 30 % du contenu dont  15% sur un seul objet)
 
 		</div>
 	</div>
-	<div class="col-md-2"></div>
-	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6"><br/><b>NB : Les réponses du présent questionnaire seront réputées faire partie intégrante du contrat dans son établissement. En conséquence, toute réticences, toute omission, toute réponse ou déclaration inexacte du proposant peut entrainer l’application des sanctions prévues aux articles 18 et 19 du Code CIMA.</b>
-		</div>
-		<div class="col-md-3"></div>
-	</div><br/><br/></div></div>{% endblock %}{% block javascripts %}<!-- jQuery --><script src="plugins/jQuery/jquery.min.js"></script><!-- Bootstrap JS --><script src="plugins/bootstrap/bootstrap.min.js"></script><!-- Style Switcher --><script type="text/javascript" src="plugins/style-switcher.js"></script><!-- Owl Carousel --><script type="text/javascript" src="plugins/owl/owl.carousel.js"></script><!-- PrettyPhoto --><script type="text/javascript" src="plugins/jquery.prettyPhoto.js"></script><!-- Bxslider --><script type="text/javascript" src="plugins/flex-slider/jquery.flexslider.js"></script><!-- CD Hero slider --><script type="text/javascript" src="plugins/cd-hero/cd-hero.js"></script><!-- Isotope --><script type="text/javascript" src="plugins/isotope.js"></script><script type="text/javascript" src="plugins/ini.isotope.js"></script><!-- Wow Animation --><script type="text/javascript" src="plugins/wow.min.js"></script><!-- Eeasing --><script type="text/javascript" src="plugins/jquery.easing.1.3.js"></script><!-- Counter --><script type="text/javascript" src="plugins/jquery.counterup.min.js"></script><!-- Waypoints --><script type="text/javascript" src="plugins/waypoints.min.js"></script><!-- Nbco --><script type="text/javascript" src="plugins/nprogress/nprogress.js"></script><!-- Main Script --><script src="js/script.js"></script><script>
-$(document).ready(function () {
-$('.stepper').mdbStepper();
-})
+	<div class="form-group row">
+		<label class="col-sm-6 col-form-label">
+			<input type="checkbox" id="extGarantie" class="js-switch"/>
+			Extensions de garantie(moyenant surprime)
+		</label>
+	</div>
+	<p>DOMMAGES  ELECTRIQUES  étendus aux appareils de conditionnement d’air (Climatiseur, Split )</p>
 
-function someFunction21() {
-setTimeout(function () {
-$('#horizontal-stepper').nextStep();
-}, 2000);
-}</script>{% endblock %}
+	<div class="form-group row">
+		<label class="col-sm-6 col-form-label">
+			<input type="checkbox" id="extClim" class="js-switch"/>
+			Climatisation
+		</label>
+		<label class="col-sm-6 col-form-label">
+			<input type="checkbox" id="extOrdi" class="js-switch"/>
+			Ordinateur
+		</label>
+
+	</div>
+
+
+	<h2>Description du matériel</h2>
+	<fieldset>
+		<legend>Materiel 1:</legend>
+
+		<div class="form-group row">
+			<label for="activity" class="col-sm-1 col-form-label">Nature :</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="natureM">
+			</div>
+			<label for="anneeAcquisition" class="col-sm-2 col-form-label">Année d’acquisition:</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="anneeAcquisition">
+			</div>
+			<label for="marque" class="col-sm-1 col-form-label">Marque:</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="marque">
+			</div>
+
+		</div>
+
+
+		<div class="form-group row">
+
+			<label for="activity" class="col-sm-2 col-form-label">Valeur unitaire:</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="valeurUnitaire">
+			</div>
+			<label for="activity" class="col-sm-2 col-form-label">Nombre total:</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="nbTotal">
+			</div>
+
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Materiel 2:</legend>
+
+		<div class="form-group row">
+			<label for="activity" class="col-sm-1 col-form-label">Nature :</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="natureM">
+			</div>
+			<label for="anneeAcquisition" class="col-sm-2 col-form-label">Année d’acquisition:</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="anneeAcquisition">
+			</div>
+			<label for="marque" class="col-sm-1 col-form-label">Marque:</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="marque">
+			</div>
+
+		</div>
+
+
+		<div class="form-group row">
+
+			<label for="activity" class="col-sm-2 col-form-label">Valeur unitaire:</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="valeurUnitaire">
+			</div>
+			<label for="activity" class="col-sm-2 col-form-label">Nombre total:</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="nbTotal">
+			</div>
+
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Materiel 3:</legend>
+
+		<div class="form-group row">
+			<label for="activity" class="col-sm-1 col-form-label">Nature :</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="natureM">
+			</div>
+			<label for="anneeAcquisition" class="col-sm-2 col-form-label">Année d’acquisition:</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="anneeAcquisition">
+			</div>
+			<label for="marque" class="col-sm-1 col-form-label">Marque:</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="marque">
+			</div>
+
+		</div>
+
+
+		<div class="form-group row">
+
+			<label for="activity" class="col-sm-2 col-form-label">Valeur unitaire:</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="valeurUnitaire">
+			</div>
+			<label for="activity" class="col-sm-2 col-form-label">Nombre total:</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="nbTotal">
+			</div>
+
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Materiel 4:</legend>
+
+		<div class="form-group row">
+			<label for="activity" class="col-sm-1 col-form-label">Nature :</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="natureM">
+			</div>
+			<label for="anneeAcquisition" class="col-sm-2 col-form-label">Année d’acquisition:</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="anneeAcquisition">
+			</div>
+			<label for="marque" class="col-sm-1 col-form-label">Marque:</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="marque">
+			</div>
+
+		</div>
+
+
+		<div class="form-group row">
+
+			<label for="activity" class="col-sm-2 col-form-label">Valeur unitaire:</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="valeurUnitaire">
+			</div>
+			<label for="activity" class="col-sm-2 col-form-label">Nombre total:</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="nbTotal">
+			</div>
+
+		</div>
+	</fieldset>
+
+
+	<h2>Bris de machine</h2>
+	<fieldset>
+		<legend>Materiel :</legend>
+
+		<div class="form-group row">
+			<label for="activity" class="col-sm-1 col-form-label">Nature :</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="natureM">
+			</div>
+			<label for="anneeAcquisition" class="col-sm-2 col-form-label">Année d’acquisition:</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="anneeAcquisition">
+			</div>
+			<label for="marque" class="col-sm-1 col-form-label">Marque:</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="marque">
+			</div>
+
+		</div>
+
+
+		<div class="form-group row">
+
+			<label for="activity" class="col-sm-2 col-form-label">Valeur :</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="valeurMachine">
+			</div>
+			<label for="activity" class="col-sm-2 col-form-label">Puissance:</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="puissance">
+			</div>
+
+		</div>
+	</fieldset>
+
+{% endblock %}
+
+{% block step4 %}
+	<h2 class="StepTitle">Garanties souhaitées</h2>
+	<div class="col-sm-12">
+		<div class="form-check">
+
+			<label class="form-check-label" for="vb">
+				Incendie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+			</label>
+			<input class="form-check-input" type="checkbox" value="Villa" id="vb">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="vr1">
+				Dommages électriques&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="VR1" id="vr1">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="vr2">
+				Tempêtes ouragans cyclones
+			</label>
+			<input class="form-check-input" type="checkbox" value="VR2" id="vr2">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="appart">
+				Dégats des eaux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="appart">
+				Vol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="appart">
+				RC Chef de famille&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="appart">
+				RC Propriétaire d'immeuble&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="appart">
+				Séjour voyage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="appart">
+				Denrées en congelateur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="appart">
+				Tous risques informatiques&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="appart">
+				GEMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+		</div>
+		<div class="form-check">
+
+			<label class="form-check-label" for="appart">
+				Bris de machine&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</label>
+			<input class="form-check-input" type="checkbox" value="Appart" id="appart">
+		</div>
+		<br/>
+	</div>
+
+{% endblock %}

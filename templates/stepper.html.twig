@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta
+		http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- Meta, title, CSS, favicons, etc. -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>GAB | Devis
+		</title>
+
+		<!-- Bootstrap -->
+		<link href="{{ asset('plugins/bootstrap_stepper/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
+		<link
+		href="{{ asset('plugins/switchery/dist/switchery.min.css')}}" rel="stylesheet">
+
+		<!-- Font Awesome -->
+		<link
+		href="{{ asset('plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+
+
+		<!-- NProgress -->
+		<link
+		href="{{ asset('plugins/nprogress/nprogress.css')}}" rel="stylesheet">
+
+
+		<!-- Custom Theme Style -->
+		<link href="{{ asset('build/css/custom.min.css')}}" rel="stylesheet"> {% block styleheader %}{% endblock %}
+
+		</head>
+
+		<body class="nav-md">
+			<div class="container body">
+				<div class="main_container">
+					<div class="col-md-3 left_col">
+						<div class="left_col scroll-view">
+							<div class="navbar nav_title" style="border: 0;">
+								<a href="index.html" class="site_title">
+
+									<span>GAB SA | Devis</span>
+								</a>
+							</div>
+
+							<div class="clearfix"></div>
+
+							<!-- menu profile quick info -->
+							<div class="profile clearfix">
+								<div class="profile_pic">
+									<img src="{{asset('images/logomap.png')}}" alt="..." class="img-circle profile_img">
+								</div>
+							</div>
+							<!-- /menu profile quick info -->
+
+							<br/>
+
+							<!-- sidebar menu -->
+							<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+								<div class="menu_section">
+									<h3>Devis sur produits</h3>
+									<ul class="nav side-menu">
+										<li>
+											<a href="{{path('quiz_auto')}}">
+												<i class="fa fa-laptop"></i>
+												Automobile
+											</a>
+										</li>
+										<li>
+											<a href="{{path('quiz_sante')}}">
+												<i class="fa fa-laptop"></i>
+												Sante
+											</a>
+										</li>
+										<li>
+											<a href="{{path('quiz_ia')}}">
+												<i class="fa fa-laptop"></i>
+												Individuel Accident
+											</a>
+										</li>
+										<li>
+											<a href="{{path('quiz_rc_sport')}}">
+												<i class="fa fa-laptop"></i>
+												RC Sportive
+											</a>
+										</li>
+										<li>
+											<a href="{{path('quiz_astrim')}}">
+												<i class="fa fa-laptop"></i>
+												Multirisque Professionnelle
+											</a>
+										</li>
+										<li>
+											<a href="{{path('quiz_trc')}}">
+												<i class="fa fa-laptop"></i>
+												Tout Risque Construction
+											</a>
+										</li>
+										<li>
+											<a href="{{path('quiz_astrim')}}">
+												<i class="fa fa-laptop"></i>
+												RC Générale
+											</a>
+										</li>
+										<li>
+											<a href="{{path('quiz_rc_sco')}}">
+												<i class="fa fa-laptop"></i>
+												RC Scolaire
+											</a>
+										</li>
+
+										<li>
+											<a href="{{path('quiz_transport')}}">
+												<i class="fa fa-laptop"></i>
+												Transport
+											</a>
+										</li>
+										<li>
+											<a href="{{path('quiz_astrim')}}">
+												<i class="fa fa-laptop"></i>
+												Dommage à l'ouvrage
+											</a>
+										</li>
+										<li>
+											<a href="{{path('quiz_rcet')}}">
+												<i class="fa fa-laptop"></i>
+												RCET
+											</a>
+										</li>
+										<li>
+											<a href="{{path('quiz_astrim')}}">
+												<i class="fa fa-laptop"></i>
+												Voyage
+											</a>
+										</li>
+										<li>
+											<a href="{{path('quiz_astrim')}}">
+												<i class="fa fa-laptop"></i>
+												ASTRIM
+											</a>
+										</li>
+
+									</ul>
+								</div>
+
+							</div>
+							<!-- /sidebar menu -->
+
+							<!-- /menu footer buttons -->
+							<div class="sidebar-footer hidden-small">
+								<a data-toggle="tooltip" data-placement="top" title="Settings">
+									<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+								</a>
+								<a data-toggle="tooltip" data-placement="top" title="FullScreen">
+									<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+								</a>
+								<a data-toggle="tooltip" data-placement="top" title="Lock">
+									<span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+								</a>
+								<a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+									<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+								</a>
+							</div>
+							<!-- /menu footer buttons -->
+						</div>
+					</div>
+
+
+					<!-- page content -->
+					<div class="right_col" role="main">
+						<div class="">
+							<div class="page-title">
+								<div class="title_left">
+									<h3></h3>
+								</div>
+
+
+							</div>
+							<div class="clearfix"></div>
+
+							<div class="row">
+
+								<div class="col-md-12 col-sm-12 col-xs-12">
+									<div class="x_panel">
+										<div class="x_title">
+											<h2>
+												{% block titre %}{% endblock %}
+											</h2>
+											<ul class="nav navbar-right panel_toolbox">
+												<li>
+													<a class="collapse-link">
+														<i class="fa fa-chevron-up"></i>
+													</a>
+												</li>
+												<li class="dropdown">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+														<i class="fa fa-wrench"></i>
+													</a>
+													<ul class="dropdown-menu" role="menu">
+														<li>
+															<a href="#">Settings 1</a>
+														</li>
+														<li>
+															<a href="#">Settings 2</a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a class="close-link">
+														<i class="fa fa-close"></i>
+													</a>
+												</li>
+											</ul>
+											<div class="clearfix"></div>
+										</div>
+										<div
+											class="x_content">
+
+
+											<!-- Smart Wizard -->
+											<p>DECLARATION DU PROPOSANT</p>
+											<p>La proposition n’engage ni le proposant, ni l’Assureur. Seule la police ou la note de couverture constate leur engagement réciproque. Cependant l’attention du proposant est attirée sur l’importance des déclarations qui vont suivre.
+												Ces déclarations doivent en effet permettre à l’Assureur d’apprécier les risques proposés. Si ces derniers sont acceptés, elles serviront de base au contrat et en feront partie intégrante.</p>
+											<div id="wizard" class="form_wizard wizard_horizontal">
+												<ul class="wizard_steps">
+													<li>
+														<a href="#step-1">
+															<span class="step_no">1</span>
+															<span class="step_descr">
+																Etape 1<br/>
+																<small>Identification et Localisation</small>
+															</span>
+														</a>
+													</li>
+													<li>
+														<a href="#step-2">
+															<span class="step_no">2</span>
+															<span class="step_descr">
+																Etape 2<br/>
+																<small>Evaluation du bien</small>
+															</span>
+														</a>
+													</li>
+													<li>
+														<a href="#step-3">
+															<span class="step_no">3</span>
+															<span class="step_descr">
+																Etape 3<br/>
+																<small>Capitaux garantis</small>
+															</span>
+														</a>
+													</li>
+													<li>
+														<a href="#step-4">
+															<span class="step_no">4</span>
+															<span class="step_descr">
+																Etape 4<br/>
+																<small>Garanties souhaitées</small>
+															</span>
+														</a>
+													</li>
+												</ul>
+												<div id="step-1"> {% block step1 %}{% endblock %}
+
+													</div>
+													<div id="step-2"> {% block step2 %}{% endblock %}
+
+
+														</div>
+														<div id="step-3"> {% block step3 %}{% endblock %}
+
+
+															</div>
+															<div id="step-4"> {% block step4 %}{% endblock %}
+																<p>NB : Les réponses du présent questionnaire seront réputées faire partie intégrante du contrat dans son établissement. En conséquence, toute réticences, toute omission, toute réponse ou déclaration inexacte du proposant peut entrainer l’application des sanctions prévues aux articles 18 et 19 du Code CIMA.</p>
+															</div>
+
+														</div>
+														<!-- End SmartWizard Content -->
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /page content -->
+
+
+								<!-- footer content -->
+								<footer>
+									<div class="pull-right">
+										Gentelella - Bootstrap Admin Template by
+										<a href="https://colorlib.com">Colorlib</a>
+									</div>
+									<div class="clearfix"></div>
+								</footer>
+								<!-- /footer content -->
+
+								<!-- jQuery -->
+								<script src="{{ asset('plugins/jquery_stepper/dist/jquery.min.js')}}"></script><!-- Bootstrap --><script src="{{ asset('plugins/bootstrap_stepper/dist/js/bootstrap.min.js')}}"></script><!-- FastClick --><script src="{{ asset('plugins/fastclick/lib/fastclick.js')}}"></script><!-- NProgress --><script src="{{ asset('plugins/nprogress/nprogress.js')}}"></script><!-- jQuery Smart Wizard --><script src="{{ asset('plugins/jQuery-Smart-Wizard/js/jquery.smartWizard.js')}}"></script><!-- Custom Theme Scripts --><script src="{{ asset('build/js/custom.min.js')}}"></script>
+								<script src="{{ asset('plugins/switchery/dist/switchery.min.js')}}"></script>
+							</body>
+						</body>
+					</body>
+				</html>
+			</body>
+		</html>
+	</body>
+</html>

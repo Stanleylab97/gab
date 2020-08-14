@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>La GAB-SA</title>
+
+		<!-- mobile responsive meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="stylesheet" href="{{ asset('plugins/bootstrap/bootstrap.min.css') }}">
+		<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+	</head>
+	<body>
+		<section id="main-container">
+			<div class="container">
+				<section id="image-block" class="image-block p-0">
+					<div class="card">
+						<div class="card-header">
+							<h3>Nouvelle déclaration de sinistre</h3>
+						</div>
+
+
+						<div class="card-body">
+							<div class="col-sm-3"></div>
+							<div class="col-sm-6" id="declaration">
+
+								<fieldset>
+									<legend>Identification du client</legend>
+
+									<div class="form-group row">
+										<label> <b>Civilité:</b> {{data.civility}}</label>
+									</div>
+									<div class="form-group row">
+										<label><b>Nom:</b> {{data.nom}}</label>
+										<label class="col-sm-4 col-form-label"><b>Prénoms:</b> {{data.prenoms}}</label>
+									</div>
+
+									<div class="form-group row">
+										<label  class="col-sm-4 col-form-label"><b>Numero Client:</b> {{data.numClient}}</label>
+										<label  class="col-sm-4 col-form-label"><b>Numéro Contrat:</b> {{data.numContrat}}</label>
+									</div>
+		
+									<div class="form-group row">
+										<label for="tel" class="col-sm-4 col-form-label"><b>Téléphone: </b> {{data.tel}}</label> 
+										<label for="email" class="col-sm-4 col-form-label"><b>Email: </b> {{data.email}}</label>
+									</div>
+									
+								</fieldset>
+								<fieldset>
+									<legend>Détails du sinistre</legend>
+
+									<div class="form-group row">
+										<label for="email" class="col-sm-4 col-form-label"><b>Date de survenance:</b> {{data.dateSin}} à {{data.heureSin}}	</label>
+									</div>
+
+									<div class="form-group row">
+										<label for="email" class="col-sm-4 col-form-label"><b>Enregistré à l'agence</b> : {{data.agence}} pour un contrat {{data.typeContrat}}</label>
+									</div>
+
+									<div class="form-group row">
+										{% if data.chocked == "Oui" %}
+											<p>On enregistre des blessures</p>
+										{% else %}
+											<p>Pas  de cas de blessure.</p>
+										{% endif %}
+
+									</div>
+
+
+									<div class="form-row">
+										<p>
+											<b>Circonstances :</b>
+											{{data.circonstances}}</p>
+									</div><br/>
+
+									<div class="form-row">
+										<p>
+											<b>Dommages enregistrés :</b>
+											{{data.dommages}}</p>
+									</div><br/>
+
+
+									<img src="https://images.pexels.com/photos/4499803/pexels-photo-4499803.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-fluid" alt="Responsive image">
+
+
+								</div>
+
+								<div class="col-sm-3"></div>
+
+							</fieldset>
+						</div>
+					</div>
+				</section>
+
+			</body>
+		</html>
+	</body>
+</html>

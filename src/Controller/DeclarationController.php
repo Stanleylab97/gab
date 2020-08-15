@@ -53,11 +53,12 @@ class DeclarationController extends AbstractController
             $declaration->setCirconstances($data['circonstances']);
             $declaration->setDommages($data['dommages']);
             $declaration->setPhoto('link');
+            $declaration->setDateEnreg(new \DateTime());
             $em->persist($declaration);
             $em->flush();   
 
             $message=(new \Swift_Message('Nouvelle déclaration de sinistre'))
-                    ->setFrom($data['email'])
+                    ->setFrom('noreply@gabassurance.com')
                     ->setTo('stanislasazanmassou@gmail.com')
                     ->setBody(
                         $this->renderView(
@@ -66,13 +67,25 @@ class DeclarationController extends AbstractController
                         ),
                         'text/html'
                     )
+                    ->setCharset('utf-8')
             ;
 
+            try{
             $mailer->send($message);
+            $this->addFlash('success', 'Votre déclaration a bien été enregistrée!');
+        return $this->redirectToRoute('accueil');
+            }catch(\Swift_TransportException $e){
+                $this->addFlash('error', "Erreur ".$e->getMessage());
+            }catch(\Exception $e){
+               
+                $this->addFlash('error', "Erreur ".$e->getMessage());
+            }
+          
+                    
 
-            $this->addFlash('success', 'Votre déclaration a été enregistrée!');
+            
 
-            return $this->redirectToRoute('accueil');
+
             }
         }
 

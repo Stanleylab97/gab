@@ -1,6 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+	{% for message in app.flashes('success') %}
+		<div class="alert alert-notice">
+			{{ message }}
+		</div>
+	{% endfor %}
 
 	<!-- Slider start -->
 	<section id="home" class="p-0">

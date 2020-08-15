@@ -94,6 +94,11 @@ class Declaration
      */
     private $photo;
 
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $dateEnreg;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -275,6 +280,18 @@ class Declaration
     public function setPhoto(string $photo): self
     {
         $this->photo = $photo;
+
+        return $this;
+    }
+
+    public function getDateEnreg(): ?\DateTimeInterface
+    {
+        return $this->dateEnreg;
+    }
+
+    public function setDateEnreg(\DateTimeInterface $dateEnreg): self
+    {
+        $this->dateEnreg = $dateEnreg;
 
         return $this;
     }

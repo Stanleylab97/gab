@@ -30,40 +30,70 @@
 									<legend>Identification du client</legend>
 
 									<div class="form-group row">
-										<label> <b>Civilité:</b> {{data.civility}}</label>
+										<label>
+											<b>Civilité:</b>
+											{{data.civility}}</label>
 									</div>
 									<div class="form-group row">
-										<label><b>Nom:</b> {{data.nom}}</label>
-										<label class="col-sm-4 col-form-label"><b>Prénoms:</b> {{data.prenoms}}</label>
+										<label>
+											<b>Nom:</b>
+											{{data.nom}}</label>
+										<label class="col-sm-4 col-form-label">
+											<b>Prénoms:</b>
+											{{data.prenoms}}</label>
 									</div>
 
 									<div class="form-group row">
-										<label  class="col-sm-4 col-form-label"><b>Numero Client:</b> {{data.numClient}}</label>
-										<label  class="col-sm-4 col-form-label"><b>Numéro Contrat:</b> {{data.numContrat}}</label>
+										<label class="col-sm-4 col-form-label">
+											<b>Numero Client:</b>
+											{{data.numClient}}</label>
+										<label class="col-sm-4 col-form-label">
+											<b>Numéro Contrat:</b>
+											{{data.numContrat}}</label>
 									</div>
-		
+
 									<div class="form-group row">
-										<label for="tel" class="col-sm-4 col-form-label"><b>Téléphone: </b> {{data.tel}}</label> 
-										<label for="email" class="col-sm-4 col-form-label"><b>Email: </b> {{data.email}}</label>
+										<label for="tel" class="col-sm-4 col-form-label">
+											<b>Téléphone:
+											</b>
+											{{data.tel}}</label>
+										<label for="email" class="col-sm-4 col-form-label">
+											<b>Email:
+											</b>
+											{{data.email}}</label>
 									</div>
-									
+
 								</fieldset>
 								<fieldset>
 									<legend>Détails du sinistre</legend>
 
 									<div class="form-group row">
-										<label for="email" class="col-sm-4 col-form-label"><b>Date de survenance:</b> {{data.dateSin}} à {{data.heureSin}}	</label>
+										<label for="email" class="col-sm-4 col-form-label">
+											<b>Date de survenance:</b>
+											{{data.dateSin}}
+											à
+											{{data.heureSin}}
+										</label>
 									</div>
 
 									<div class="form-group row">
-										<label for="email" class="col-sm-4 col-form-label"><b>Enregistré à l'agence</b> : {{data.agence}} pour un contrat {{data.typeContrat}}</label>
+										<label for="email" class="col-sm-4 col-form-label">
+											<b>Enregistré à l'agence</b>
+											:
+											{{data.agence}}
+											pour un contrat
+											{{data.typeContrat}}</label>
 									</div>
 
 									<div class="form-group row">
 										{% if data.chocked == "Oui" %}
-											<p>On enregistre des blessures</p>
+											<p>
+												<b>On enregistre des blessures</b>
+											</p>
 										{% else %}
-											<p>Pas  de cas de blessure.</p>
+											<p>
+												<b>Pas  de cas de blessure.</b>
+											</p>
 										{% endif %}
 
 									</div>
